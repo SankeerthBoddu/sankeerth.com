@@ -1,0 +1,9 @@
+<div class="container footer-container">
+  <p>
+    {{ site.name | escape }} -
+    <img src="/images/email.svg" alt="Email" style="vertical-align: middle; height: 16px;">
+    {%- if site.footer_show_references -%}
+      &nbsp;- {{ site.references_title | default: "References on request" }}
+    {%- endif -%}
+  </p>
+</div>

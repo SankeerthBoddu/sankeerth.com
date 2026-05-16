@@ -1,0 +1,54 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+---
+
+<section class="section">
+  <div class="section-shell contact-grid">
+    <div class="page-intro contact-intro">
+      <p class="section-kicker">Get in touch</p>
+      <h2>Open to serious conversations around cloud, DevOps, security, data platforms, and automation.</h2>
+      <p>
+        The best fit is work where reliability, delivery discipline, data movement, and practical platform
+        engineering matter.
+      </p>
+    </div>
+
+    <div class="contact-card">
+      {% if site.email %}
+        <div class="contact-row">
+          <span><i class="fas fa-envelope"></i></span>
+          <div>
+            <strong>Email</strong>
+            <img src="/images/email.svg" alt="Email address">
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="contact-row">
+        <span><i class="fab fa-linkedin"></i></span>
+        <div>
+          <strong>LinkedIn</strong>
+          <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">linkedin.com/in/{{ site.linkedin_username }}</a>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <span><i class="fab fa-github"></i></span>
+        <div>
+          <strong>GitHub</strong>
+          <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">github.com/{{ site.github_username }}</a>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <span><i class="fas fa-map-marker-alt"></i></span>
+        <div>
+          <strong>Location</strong>
+          <p>Raleigh, NC, USA</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,59 @@
+<nav class="main-navigation">
+  <div class="nav-shell">
+    <div class="nav-brand">
+      <a href="/">{{ site.name | escape }}</a>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+      <li><a href="/experience/" {% if page.url == "/experience/" %}class="active"{% endif %}>Experience</a></li>
+      <li><a href="/projects/" {% if page.url == "/projects/" %}class="active"{% endif %}>Personal Projects</a></li>
+      <li><a href="/skills/" {% if page.url == "/skills/" %}class="active"{% endif %}>Skills</a></li>
+      <li><a href="/contact/" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+{% if page.url == "/" %}
+<header class="site-hero">
+  <div class="hero-shell">
+    <div class="hero-copy">
+      <p class="eyebrow">Cloud platforms | AI automation | DevSecOps | Data engineering</p>
+      <h1>{{ site.name | escape }}</h1>
+      <p class="hero-title">{{ site.title | escape }}</p>
+      <p class="hero-lede">
+        I build reliable cloud platforms, practical AI-enabled workflows, secure delivery pipelines,
+        and data ingestion systems. Outside work, I build personal products and labs
+        that keep me close to hands-on engineering.
+      </p>
+      <div class="hero-actions">
+        <a href="/experience/" class="button primary">View Experience</a>
+        <a href="/projects/" class="button secondary">Personal Projects</a>
+      </div>
+    </div>
+    <div class="hero-panel no-print">
+      <span class="profile-img" style="background-image: url({{ site.about_profile_image | relative_url }})"></span>
+      <div class="signal-list">
+        <div>
+          <strong>19+ years</strong>
+          <span>Cloud, DevOps, data, and platforms</span>
+        </div>
+        <div>
+          <strong>7 certifications</strong>
+          <span>Azure, AWS, GCP, Kubernetes, Terraform, security</span>
+        </div>
+        <div>
+          <strong>Builder outside work</strong>
+          <span>MayaGuru, ApplyBench, automation, Web3 labs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% else %}
+<header class="page-hero">
+  <div class="page-hero-shell">
+    <p class="eyebrow">{{ site.name | escape }}</p>
+    <h1>{{ page.title | escape }}</h1>
+  </div>
+</header>
+{% endif %}

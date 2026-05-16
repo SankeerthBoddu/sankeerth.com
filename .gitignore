@@ -1,0 +1,37 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby
+*.gem
+Gemfile.lock
+
+# Node
+node_modules/
+boddu-coin/node_modules/
+boddu-coin/cache/
+boddu-coin/artifacts/
+boddu-coin/coverage/
+
+# Environment
+.env
+boddu-coin/.env
+boddu-coin/deployments-*.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Personal notes - DO NOT COMMIT
+MY-NOTES.md
+*-NOTES.md
+*-GUIDE.md
+PERSONAL-*.md
+GITHUB-PROFILE-README.md

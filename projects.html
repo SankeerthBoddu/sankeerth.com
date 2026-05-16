@@ -1,0 +1,51 @@
+---
+layout: default
+title: Personal Projects
+permalink: /projects/
+---
+
+<section class="section">
+  <div class="section-shell page-intro">
+    <p class="section-kicker">Personal-time work</p>
+    <h2>Projects that show how I learn, build, and ship outside my day job.</h2>
+    <p>
+      These are intentionally separate from my professional experience. They are personal products,
+      public proof-of-concepts, and labs that reflect curiosity, product thinking, and hands-on engineering.
+    </p>
+  </div>
+</section>
+
+<section class="section compact-top">
+  <div class="section-shell project-list">
+    {% for section in site.content %}
+      {% if section.title == "Personal Projects" or section.title == "Projects" %}
+        {% for item in section.content %}
+          <article class="project-card">
+            <div class="project-meta">
+              {% if item.link %}
+                <h2><a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a></h2>
+              {% else %}
+                <h2>{{ item.title }}</h2>
+              {% endif %}
+              {% if item.quote %}
+                <p>{{ item.quote }}</p>
+              {% endif %}
+              {% if item.additional_links %}
+                <div class="project-links">
+                  {% for link in item.additional_links %}
+                    <a href="{{ link.url }}" target="_blank" rel="noopener" title="{{ link.title }}">
+                      <i class="{{ link.icon }}"></i> {{ link.title }}
+                    </a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+            <div class="project-body rich-copy">
+              {{ item.description | markdownify }}
+            </div>
+          </article>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

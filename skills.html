@@ -1,0 +1,55 @@
+---
+layout: default
+title: Skills & Certifications
+permalink: /skills/
+---
+
+<section class="section">
+  <div class="section-shell page-intro">
+    <p class="section-kicker">Technical range</p>
+    <h2>Grouped around the work I want to be hired for.</h2>
+    <p>
+      The strongest through-line is cloud and AI platform engineering with DevSecOps, data platforms,
+      enterprise automation, and practical AI systems.
+    </p>
+  </div>
+</section>
+
+<section class="section compact-top">
+  <div class="section-shell">
+    {% for section in site.content %}
+      {% if section.title == "Skills" %}
+        <div class="skill-pill-grid rich-copy">
+          {{ section.content | markdownify }}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section compact-top">
+  <div class="section-shell credential-grid">
+    {% for section in site.content %}
+      {% if section.title == "Education & Certifications" %}
+        {% for item in section.content %}
+          <article class="credential-card rich-copy">
+            <h2>{{ item.title }}</h2>
+            {{ item.description | markdownify }}
+          </article>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section compact-top">
+  <div class="section-shell note-band rich-copy">
+    {% for section in site.content %}
+      {% if section.title == "Side Projects" %}
+        <p class="section-kicker">Personal labs</p>
+        <h2>Curiosity stays part of the engineering practice.</h2>
+        {{ section.content | markdownify }}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

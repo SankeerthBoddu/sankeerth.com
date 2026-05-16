@@ -1,0 +1,39 @@
+---
+layout: default
+title: Work Experience
+permalink: /experience/
+---
+
+<section class="section">
+  <div class="section-shell page-intro">
+    <p class="section-kicker">Resume focus</p>
+    <h2>Cloud platforms, AI-enabled automation, DevSecOps, data ingestion, analytics, and enterprise automation.</h2>
+    <p>
+      This page keeps the employment history clean and resume-like. Personal products and labs live
+      separately under Personal Projects.
+    </p>
+  </div>
+</section>
+
+<section class="section compact-top">
+  <div class="section-shell timeline">
+    {% for section in site.content %}
+      {% if section.title == "Experience" %}
+        {% for item in section.content %}
+          <article class="experience-card">
+            <div class="experience-meta">
+              <p class="dates">{{ item.caption }}</p>
+              <h2>{{ item.title }}</h2>
+              {% if item.sub_title %}
+                <p class="company">{{ item.sub_title }}</p>
+              {% endif %}
+            </div>
+            <div class="experience-body rich-copy">
+              {{ item.description | markdownify }}
+            </div>
+          </article>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

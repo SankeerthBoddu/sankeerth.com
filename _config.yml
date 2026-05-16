@@ -1,0 +1,277 @@
+# Site
+repository: SankeerthBoddu/sankeerth.com
+version: 2
+
+# Personal info
+name: Sankeerth Boddu
+title: Senior Cloud, AI, DevOps, Security & Data Platform Engineer
+email: mail@sankeerth.com
+email_title: Email
+website: https://sankeerth.com
+website_title: Web
+
+# Dark Mode (true/false/never)
+darkmode: true
+
+# Social links
+linkedin_username: sankeerth
+github_username: SankeerthBoddu
+twitter_username: sankeerth
+facebook_username: sankeerth
+
+# Additional icon links
+additional_links:
+  - title: MayaGuru
+    icon: fas fa-magic
+    url: https://mayaguru.com
+  - title: ApplyBench
+    icon: fas fa-file-alt
+    url: https://applybench.com
+  - title: boddu.eth
+    icon: fab fa-ethereum
+    url: https://app.ens.domains/boddu.eth
+
+# Google Analytics and Tag Manager
+google_analytics: "UA-6537510-1"
+
+# About Section
+about_title: About
+about_profile_image: images/profile1.jpg
+about_content: |
+  I am a senior cloud, AI, DevOps, security, and data platform engineer with 19+ years of experience building systems that have to be reliable, auditable, and useful.
+
+  My professional work centers on cloud platforms, AI-enabled automation, infrastructure automation, DevSecOps pipelines, data ingestion, analytics platforms, and enterprise workflow systems. I have worked across Azure, AWS, and GCP, with hands-on delivery using Terraform, Kubernetes, CI/CD, security scanning, ETL pipelines, streaming systems, and reporting platforms.
+
+  Outside work, I build personal software projects to stay close to the product side of engineering. That includes **[MayaGuru.com](https://mayaguru.com)**, **[ApplyBench.com](https://applybench.com)**, Home Assistant add-ons, n8n automation, and Web3 experiments.
+
+  **M.S. Computer Science** | **7 cloud and platform certifications** across Azure, AWS, GCP, Kubernetes, Terraform, and cloud security.
+
+content:
+  - title: Personal Projects
+    layout: list
+    content:
+      - layout: left
+        border: weak
+        title: ApplyBench.com
+        link: https://applybench.com
+        link_text: Visit ApplyBench
+        quote: >
+          Personal AI product for job search workflows
+        description: |
+          Personal product project for pay-per-use career tools: CV analysis, ATS scoring, cover letters, interview preparation, LinkedIn optimization, job comparison, and salary insights.
+
+          **Engineering focus:** document upload flows, AI analysis pipelines, reusable profile data, credit-based usage, and a single Next.js application serving multiple tools.
+
+      - layout: left
+        border: weak
+        title: MayaGuru.com
+        link: https://mayaguru.com
+        link_text: Visit MayaGuru
+        quote: >
+          Personal AI product for real estate and e-commerce image workflows
+        description: |
+          Personal product project built around practical image workflows for real estate agents and e-commerce sellers.
+
+          **What it includes:** virtual staging, day-to-dusk conversion, background removal, AI headshots, product photography, photo restoration, HD upscaling, and Maya Assistant.
+
+          **Engineering focus:** monorepo architecture, cross-subdomain authentication, credit-based billing, image processing workflows, and cost controls for GPU-backed AI features.
+
+      - layout: left
+        border: weak
+        title: ha-rustdesk-server
+        link: https://github.com/SankeerthBoddu/ha-rustdesk-server
+        link_text: View on GitHub
+        additional_links:
+          - title: Code
+            icon: fab fa-github
+            url: https://github.com/SankeerthBoddu/ha-rustdesk-server
+        quote: >
+          Open-source Home Assistant add-on for self-hosted RustDesk relay servers
+        description: |
+          Public Home Assistant add-on that packages RustDesk Server so users can self-host their own signaling and relay server for remote desktop connections.
+
+          **Engineering focus:** Home Assistant add-on packaging, multi-architecture container support, GHCR publishing, add-on documentation, configuration defaults, and practical self-hosting ergonomics.
+
+      - layout: left
+        border: weak
+        title: n8n Marketing Workflows
+        link: https://github.com/SankeerthBoddu/n8n-marketing-workflows
+        link_text: View on GitHub
+        additional_links:
+          - title: Code
+            icon: fab fa-github
+            url: https://github.com/SankeerthBoddu/n8n-marketing-workflows
+        quote: >
+          Public automation reference for AI-assisted marketing workflows
+        description: |
+          Draft/reference n8n workflows for AI content drafting, approval buffers, social posting, before/after showcases, and portfolio-style promotion.
+
+          **Engineering focus:** n8n workflow design, Gemini prompting, webhook patterns, social API glue, Google Sheets review queues, and safe credential templating.
+
+      - layout: left
+        border: weak
+        title: Power Platform AI Portal
+        link: https://github.com/SankeerthBoddu/power-platform-ai-portal
+        link_text: View on GitHub
+        additional_links:
+          - title: Code
+            icon: fab fa-github
+            url: https://github.com/SankeerthBoddu/power-platform-ai-portal
+        quote: >
+          Azure AI and Power Platform integration proof of concept
+        description: |
+          Public proof of concept integrating Azure AI Foundry with Microsoft Power Platform to categorize and prioritize IT asset requests.
+
+          **Tech:** Azure Functions, Azure AI Foundry, Power Automate, Dataverse, Power Pages, Power Apps, and OpenAPI.
+
+      - layout: left
+        border: weak
+        title: Cloud Resume / This Site
+        link: https://sankeerth.com
+        quote: >
+          Jekyll site on GitHub Pages
+        description: |
+          This personal site, built with Jekyll and hosted on GitHub Pages with a custom domain.
+
+      - layout: left
+        border: weak
+        title: BODDU Coin (BDU)
+        link: /boddu-coin/
+        link_text: Try the Faucet
+        additional_links:
+          - title: Code
+            icon: fab fa-github
+            url: https://github.com/SankeerthBoddu/sankeerth.com/tree/main/boddu-coin
+        quote: >
+          Web3 learning project on Ethereum mainnet
+        description: |
+          Personal project to learn smart contract development and mainnet operations. Built an ERC-20 token with a public faucet that lets anyone claim free tokens with cooldown controls.
+
+          **Engineering focus:** Solidity, OpenZeppelin, Hardhat tests, MetaMask integration, contract verification, faucet rate limiting, ENS, and validator operations.
+
+  - title: Experience
+    layout: list
+    content:
+      - layout: left
+        title: Senior Cloud & DevOps Engineer
+        sub_title: Publicis Sapient (Financial & Public Sector)
+        caption: Sep 2021 - Present
+        description: |
+          - Built an internal Azure AI Foundry application that generated Terraform code with retrieval-based grounding and GitOps automation.
+          - Delivered self-service portals using Power Pages, Power Automate, Dynamics 365, and Dataverse with role-based access patterns.
+          - Designed DevSecOps pipelines in Azure DevOps with Veracode, Snyk, SonarQube, and SBOM generation.
+          - Worked across cloud engineering and data-heavy delivery, connecting AI workflows, enterprise systems, and operational reporting.
+
+      - layout: left
+        title: Senior DevOps Engineer
+        sub_title: Northrop Grumman (Public Sector)
+        caption: Mar 2018 - Sep 2021
+        description: |
+          - Architected Lambda architecture processing petabytes of streaming data with Kafka, Spark, HBase, and Cassandra for real-time analytics.
+          - Automated platform lifecycle using Terraform, Ansible, Kubernetes, and Jenkins CI/CD pipelines.
+          - Implemented monitoring and alerting for Kafka and Hadoop ecosystem components in a compliance-focused environment.
+
+      - layout: left
+        title: ETL Architect
+        sub_title: Polaris Consulting (Financial Sector)
+        caption: Jun 2006 - Apr 2018
+        description: |
+          - Architected expense analytics data warehouse integrating Oracle AP, P2P systems, invoices, and external feeds into a centralized repository.
+          - Built scalable ETL pipelines with Ab Initio, designed star-schema models, and managed nightly batch loads.
+          - Delivered BI solutions using MicroStrategy and Business Objects with row-level security controls.
+
+  - title: Education & Certifications
+    layout: list
+    content:
+      - layout: left
+        title: M.S. Computer Science
+        description: |
+          - Governor's State University, IL
+          - GPA 3.75
+
+      - layout: left
+        title: Certifications
+        description: |
+          - Azure AI Engineer Associate (AI-102)
+          - Azure Fundamentals
+          - AWS Solutions Architect - Associate
+          - Google Associate Cloud Engineer
+          - Certified Kubernetes Administrator (CKA)
+          - HashiCorp Terraform Associate
+          - Certificate of Cloud Security Knowledge (CCSK)
+
+  - title: Skills
+    layout: text
+    content: |
+      **Cloud platforms:** Azure, AWS, GCP, landing zones, networking, identity, cost awareness, and operational readiness
+
+      **DevSecOps:** Terraform, Kubernetes, Docker, Azure DevOps, Jenkins, GitHub Actions, CI/CD, SAST, SCA, SBOM, policy-driven delivery
+
+      **Data platforms:** Kafka, Spark, Hadoop, HBase, Cassandra, Oracle, Ab Initio, ETL pipelines, data warehouses, analytics, BigQuery
+
+      **Enterprise automation:** Power Automate, Power Apps, Power Pages, Dataverse, Dynamics 365, Copilot Studio, n8n, Node-RED
+
+      **AI engineering:** Azure AI Foundry, OpenAI, Google Gemini, RAG, prompt workflows, AI-assisted internal tools
+
+      **Personal labs:** Solidity, Hardhat, Ethers.js, OpenZeppelin, Ethereum validator operations
+
+  - title: Side Projects
+    layout: text
+    content: |
+      Personal-time work includes MayaGuru, ApplyBench, Home Assistant add-ons, n8n workflows, local AI automation, MQTT-based home automation, and Ethereum validator operations.
+
+# Footer
+footer_show_references: false
+
+# Build settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO Settings
+description: >-
+  Sankeerth Boddu - senior cloud, AI, DevOps, security, and data platform engineer with 19+ years of experience.
+  Cloud platforms, DevSecOps, Kubernetes, Terraform, data ingestion, analytics, Power Platform, and practical AI systems.
+
+keywords: >-
+  cloud engineer, ai engineer, devops engineer, platform engineer, azure, aws, gcp, devsecops,
+  kubernetes, terraform, data engineering, etl, data ingestion, analytics, power platform,
+  azure ai, ai tools, mayaguru, applybench, boddu coin, sankeerth boddu, boddu.eth
+
+author:
+  name: Sankeerth Boddu
+  email: contact@sankeerth.com
+  twitter: sankeerth
+
+twitter:
+  username: sankeerth
+  card: summary_large_image
+
+social:
+  name: Sankeerth Boddu
+  links:
+    - https://twitter.com/sankeerth
+    - https://linkedin.com/in/sankeerth
+    - https://github.com/SankeerthBoddu
+    - https://sankeerth.com
+
+exclude:
+  [
+    "Gemfile",
+    "Gemfile.lock",
+    "node_modules",
+    "vendor/bundle/",
+    "vendor/cache/",
+    "vendor/gems/",
+    "vendor/ruby/",
+    "lib/",
+    "scripts/",
+    "docker-compose.yml",
+    "boddu-coin/node_modules",
+    "boddu-coin/cache",
+    "boddu-coin/artifacts",
+  ]
