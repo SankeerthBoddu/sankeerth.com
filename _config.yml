@@ -4,7 +4,7 @@ version: 2
 
 # Personal info
 name: Sankeerth Boddu
-title: Senior Cloud, AI, DevOps, Security & Data Platform Engineer
+title: Senior Cloud / AI / Data Platform Engineer
 email: mail@sankeerth.com
 email_title: Email
 website: https://sankeerth.com
@@ -38,11 +38,11 @@ google_analytics: "UA-6537510-1"
 about_title: About
 about_profile_image: images/profile1.jpg
 about_content: |
-  I am a senior cloud, AI, DevOps, security, and data platform engineer with 19+ years of experience building systems that have to be reliable, auditable, and useful.
+  I am a senior cloud, AI, and data platform engineer with 19+ years of experience building systems that have to be reliable, auditable, and useful.
 
-  My professional work centers on cloud platforms, AI-enabled automation, infrastructure automation, DevSecOps pipelines, data ingestion, analytics platforms, and enterprise workflow systems. I have worked across Azure, AWS, and GCP, with hands-on delivery using Terraform, Kubernetes, CI/CD, security scanning, ETL pipelines, streaming systems, and reporting platforms.
+  My professional work sits where platform engineering meets data. I work on cloud infrastructure, AI-enabled automation, secure delivery pipelines, and the data systems around them: ETL, streaming, warehouse analytics, and reporting. I have worked across Azure, AWS, and GCP, with hands-on delivery using Terraform, Kubernetes, CI/CD, security scanning, and observability.
 
-  Outside work, I build personal software projects to stay close to the product side of engineering. That includes **[MayaGuru.com](https://mayaguru.com)**, **[ApplyBench.com](https://applybench.com)**, Home Assistant add-ons, n8n automation, and Web3 experiments.
+  Outside work, I build personal software products and labs to stay close to product thinking and hands-on engineering. That includes **[ApplyBench.com](https://applybench.com)**, **[MayaGuru.com](https://mayaguru.com)**, Home Assistant add-ons, n8n automation, and Web3 experiments.
 
   **M.S. Computer Science** | **7 cloud and platform certifications** across Azure, AWS, GCP, Kubernetes, Terraform, and cloud security.
 
@@ -58,9 +58,9 @@ content:
         quote: >
           Personal AI product for job search workflows
         description: |
-          Personal product project for pay-per-use career tools: CV analysis, ATS scoring, cover letters, interview preparation, LinkedIn optimization, job comparison, and salary insights.
+          Personal product for pay-per-use career tools: CV analysis, ATS scoring, cover letters, interview preparation, LinkedIn optimization, job comparison, and salary insights.
 
-          **Engineering focus:** document upload flows, AI analysis pipelines, reusable profile data, credit-based usage, and a single Next.js application serving multiple tools.
+          **Engineering focus:** document upload flows, AI analysis pipelines, reusable profile data, credit-based usage, and Next.js product delivery.
 
       - layout: left
         border: weak
@@ -70,9 +70,9 @@ content:
         quote: >
           Personal AI product for real estate and e-commerce image workflows
         description: |
-          Personal product project built around practical image workflows for real estate agents and e-commerce sellers.
+          Personal product built around practical image workflows for real estate agents and e-commerce sellers.
 
-          **What it includes:** virtual staging, day-to-dusk conversion, background removal, AI headshots, product photography, photo restoration, HD upscaling, and Maya Assistant.
+          **What it includes:** virtual staging, day-to-dusk conversion, background removal, AI headshots, product photography, photo restoration, HD upscaling, and an assistant.
 
           **Engineering focus:** monorepo architecture, cross-subdomain authentication, credit-based billing, image processing workflows, and cost controls for GPU-backed AI features.
 
@@ -104,7 +104,7 @@ content:
         quote: >
           Public automation reference for AI-assisted marketing workflows
         description: |
-          Draft/reference n8n workflows for AI content drafting, approval buffers, social posting, before/after showcases, and portfolio-style promotion.
+          Reference n8n workflows for AI content drafting, approval buffers, social posting, before/after showcases, and portfolio-style promotion.
 
           **Engineering focus:** n8n workflow design, Gemini prompting, webhook patterns, social API glue, Google Sheets review queues, and safe credential templating.
 
@@ -123,15 +123,6 @@ content:
           Public proof of concept integrating Azure AI Foundry with Microsoft Power Platform to categorize and prioritize IT asset requests.
 
           **Tech:** Azure Functions, Azure AI Foundry, Power Automate, Dataverse, Power Pages, Power Apps, and OpenAPI.
-
-      - layout: left
-        border: weak
-        title: Cloud Resume / This Site
-        link: https://sankeerth.com
-        quote: >
-          Jekyll site on GitHub Pages
-        description: |
-          This personal site, built with Jekyll and hosted on GitHub Pages with a custom domain.
 
       - layout: left
         border: weak
@@ -158,9 +149,11 @@ content:
         caption: Sep 2021 - Present
         description: |
           - Built an internal Azure AI Foundry application that generated Terraform code with retrieval-based grounding and GitOps automation.
+          - Designed platform automation and DevSecOps pipelines in Azure DevOps with Terraform, Kubernetes, Veracode, Snyk, SonarQube, and SBOM generation.
+          - Worked on warehouse-centered data pipelines and operational analytics, including Snowflake Cortex for AI-assisted enrichment and summarization.
+          - Supported Kubernetes delivery and OpenTelemetry instrumentation patterns for service health, traces, metrics, and logs.
+          - Prototyped agent workflows with Google ADK and Gemini for practical internal automation use cases.
           - Delivered self-service portals using Power Pages, Power Automate, Dynamics 365, and Dataverse with role-based access patterns.
-          - Designed DevSecOps pipelines in Azure DevOps with Veracode, Snyk, SonarQube, and SBOM generation.
-          - Worked across cloud engineering and data-heavy delivery, connecting AI workflows, enterprise systems, and operational reporting.
 
       - layout: left
         title: Senior DevOps Engineer
@@ -168,7 +161,7 @@ content:
         caption: Mar 2018 - Sep 2021
         description: |
           - Architected Lambda architecture processing petabytes of streaming data with Kafka, Spark, HBase, and Cassandra for real-time analytics.
-          - Automated platform lifecycle using Terraform, Ansible, Kubernetes, and Jenkins CI/CD pipelines.
+          - Automated platform lifecycle with Terraform, Ansible, Kubernetes, and Jenkins CI/CD pipelines.
           - Implemented monitoring and alerting for Kafka and Hadoop ecosystem components in a compliance-focused environment.
 
       - layout: left
@@ -203,22 +196,22 @@ content:
   - title: Skills
     layout: text
     content: |
-      **Cloud platforms:** Azure, AWS, GCP, landing zones, networking, identity, cost awareness, and operational readiness
+      **Cloud / platform:** Azure, AWS, GCP, Terraform, Kubernetes, networking, identity, operational readiness
 
-      **DevSecOps:** Terraform, Kubernetes, Docker, Azure DevOps, Jenkins, GitHub Actions, CI/CD, SAST, SCA, SBOM, policy-driven delivery
+      **AI / automation:** Azure AI Foundry, OpenAI, Gemini, Google ADK, RAG, Power Platform, n8n
 
-      **Data platforms:** Kafka, Spark, Hadoop, HBase, Cassandra, Oracle, Ab Initio, ETL pipelines, data warehouses, analytics, BigQuery
+      **Data platforms:** Snowflake, Snowflake Cortex, Oracle, BigQuery, Ab Initio, ETL pipelines, data warehouses, analytics, star-schema modeling
 
-      **Enterprise automation:** Power Automate, Power Apps, Power Pages, Dataverse, Dynamics 365, Copilot Studio, n8n, Node-RED
+      **Streaming / big data:** Kafka, Spark, Hadoop, HBase, Cassandra, real-time analytics
 
-      **AI engineering:** Azure AI Foundry, OpenAI, Google Gemini, RAG, prompt workflows, AI-assisted internal tools
+      **DevOps / SRE / security:** Azure DevOps, Jenkins, GitHub Actions, CI/CD, OpenTelemetry, Veracode, Snyk, SonarQube, SBOM
 
-      **Personal labs:** Solidity, Hardhat, Ethers.js, OpenZeppelin, Ethereum validator operations
+      **Builder labs:** Next.js, Home Assistant add-ons, Node-RED, Solidity, Hardhat, Ethers.js
 
   - title: Side Projects
     layout: text
     content: |
-      Personal-time work includes MayaGuru, ApplyBench, Home Assistant add-ons, n8n workflows, local AI automation, MQTT-based home automation, and Ethereum validator operations.
+      Personal-time work includes ApplyBench, MayaGuru, Home Assistant add-ons, n8n workflows, local AI automation, and small Web3 labs.
 
 # Footer
 footer_show_references: false
@@ -234,13 +227,13 @@ plugins:
 
 # SEO Settings
 description: >-
-  Sankeerth Boddu - senior cloud, AI, DevOps, security, and data platform engineer with 19+ years of experience.
-  Cloud platforms, DevSecOps, Kubernetes, Terraform, data ingestion, analytics, Power Platform, and practical AI systems.
+  Sankeerth Boddu - senior cloud, AI, and data platform engineer with 19+ years of experience across cloud platforms,
+  automation, DevOps/SRE, security-conscious delivery, data pipelines, warehouses, analytics, and practical AI systems.
 
 keywords: >-
-  cloud engineer, ai engineer, devops engineer, platform engineer, azure, aws, gcp, devsecops,
-  kubernetes, terraform, data engineering, etl, data ingestion, analytics, power platform,
-  azure ai, ai tools, mayaguru, applybench, boddu coin, sankeerth boddu, boddu.eth
+  senior cloud engineer, ai engineer, data platform engineer, data architect, devops, sre, azure, aws, gcp,
+  kubernetes, terraform, snowflake, snowflake cortex, data pipelines, data warehouse, analytics,
+  opentelemetry, azure ai, google adk, power platform, sankeerth boddu
 
 author:
   name: Sankeerth Boddu
