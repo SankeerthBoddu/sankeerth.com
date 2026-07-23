@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<article class="post-article">
+  <div class="section-shell post-shell">
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+      {% if page.tags.size > 0 %}
+        <span class="post-tags">
+          {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+        </span>
+      {% endif %}
+    </div>
+
+    <div class="rich-copy post-body">
+      {{ content }}
+    </div>
+
+    <p class="post-back"><a href="/blog/">&larr; Back to all posts</a></p>
+  </div>
+</article>

@@ -7,6 +7,7 @@
       <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
       <li><a href="/experience/" {% if page.url == "/experience/" %}class="active"{% endif %}>Experience</a></li>
       <li><a href="/projects/" {% if page.url == "/projects/" %}class="active"{% endif %}>Personal Projects</a></li>
+      <li><a href="/blog/" {% if page.url == "/blog/" or page.layout == "post" %}class="active"{% endif %}>Blog</a></li>
       <li><a href="/skills/" {% if page.url == "/skills/" %}class="active"{% endif %}>Skills</a></li>
       <li><a href="/contact/" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a></li>
     </ul>
@@ -42,8 +43,12 @@
           <span>Azure, AWS, GCP, Kubernetes, Terraform, security</span>
         </div>
         <div>
+          <strong>AI in production</strong>
+          <span>RAG, agents, Azure AI Foundry, Gemini, local LLMs</span>
+        </div>
+        <div>
           <strong>Builder mindset</strong>
-          <span>ApplyBench, MayaGuru, automation, open-source labs</span>
+          <span>ApplyBench, MayaGuru, open-source labs</span>
         </div>
       </div>
     </div>
