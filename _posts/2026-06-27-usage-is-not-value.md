@@ -4,9 +4,10 @@ date: 2026-06-27
 layout: post
 categories: blog
 tags: [AI, governance, AIGovernance, GenAI, LLMOps]
+excerpt: "Most internal AI metrics don't tell you whether anything improved. Token usage, tool adoption, and POC counts don't answer the question that matters: is the business better because of this?"
 ---
 
-![AI governance](../assets/images/post3.jpg)
+![AI governance]({{ '/assets/images/post3.jpg' | relative_url }})
 
 Usage is not value.
 

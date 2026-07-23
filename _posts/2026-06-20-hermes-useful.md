@@ -4,11 +4,12 @@ date: 2026-06-20
 layout: post
 categories: blog
 tags: [AI, Hermes, local-llm, productivity]
+excerpt: "Memory layers, work diaries, background workflows through Discord, and Home Assistant integration — what actually makes an AI assistant stick around instead of being a one-off demo."
 ---
 
-![Hermes workspace](../assets/images/post2-pic1.jpg)
-![Notes and memory layer](../assets/images/post2-pic2.jpg)
-![Background workflows](../assets/images/post2-pic3.jpg)
+![Hermes workspace]({{ '/assets/images/post2-pic1.jpg' | relative_url }})
+![Notes and memory layer]({{ '/assets/images/post2-pic2.jpg' | relative_url }})
+![Background workflows]({{ '/assets/images/post2-pic3.jpg' | relative_url }})
 
 Lately I've been trying to make AI useful in my day-to-day, not just something I can demo once and forget about.
 

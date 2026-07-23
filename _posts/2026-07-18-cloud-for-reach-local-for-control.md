@@ -4,9 +4,10 @@ date: 2026-07-18
 layout: post
 categories: blog
 tags: [AI, local-llm, LMStudio, Ollama, llama.cpp]
+excerpt: "Local AI is not just a hobby setup anymore. LM Studio, Ollama, llama.cpp, and quantization make it realistic to run useful models on a 16GB GPU — with a practical quality/speed tiering path."
 ---
 
-![Local AI workbench](../assets/images/post5.jpg)
+![Local AI workbench]({{ '/assets/images/post5.jpg' | relative_url }})
 
 Cloud for reach.
 Local for control.
