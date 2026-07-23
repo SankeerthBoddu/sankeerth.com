@@ -1,0 +1,17 @@
+<section class="section blog-list">
+  <div class="section-shell">
+    <div class="section-heading">
+      <p class="section-kicker">Latest blog posts</p>
+      <h2>Insights and updates from my professional journey</h2>
+    </div>
+    <ul class="blog-posts">
+      {% for post in site.posts limit:3 %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
