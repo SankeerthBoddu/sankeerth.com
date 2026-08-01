@@ -17,9 +17,9 @@ Pick a number. They all say the same thing: most of what gets demoed never ships
 
 Here's the part that should get more attention.
 
-**It's not technical failure.** The MIT team reviewed 300 public AI deployments and interviewed 150 leaders, and their conclusion matches the earlier surveys: the core issue isn't model quality. It's flawed integration into the enterprise — the "learning gap" between a capable model and an organization that hasn't built the workflows, data access, and governance around it.
+**It's not technical failure.** The MIT team reviewed 300 public AI deployments and interviewed 150 enterprise leaders, and their conclusion matches the earlier surveys: the core issue isn't model quality. It's flawed integration into the enterprise — the "learning gap" between a capable model and an organization that hasn't built the workflows, data access, and governance around it. That gap is what kills most POCs.
 
-Algorithmia's State of Enterprise ML survey puts numbers on it. 42% cite infrastructure complexity. 31% hit regulatory roadblocks after the POC was approved. 28% couldn't manage cost — what worked in dev exploded in production. 26% struggled with data governance: getting the right data, with the right permissions, at the right time.
+Algorithmia's State of Enterprise ML survey — from teams actually trying to deploy ML, not lab experiments — puts numbers on it. 42% cite infrastructure complexity. 31% hit regulatory roadblocks after the POC was approved. 28% couldn't manage cost — what worked in dev exploded in production. 26% struggled with data governance: getting the right data, with the right permissions, at the right time.
 
 Notice what's not on that list. "The model didn't work."
 
