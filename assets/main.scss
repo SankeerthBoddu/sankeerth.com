@@ -189,7 +189,7 @@ body.dark .main-navigation {
   display: grid;
   gap: 56px;
   grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
-  min-height: calc(100vh - 70px);
+  min-height: clamp(520px, 72vh, 780px);
   padding-bottom: 72px;
   padding-top: 72px;
 }
