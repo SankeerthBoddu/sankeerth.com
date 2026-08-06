@@ -13,6 +13,8 @@ Deployment is where most POCs die.
 
 The models work. The demos look great. What kills the project is everything production actually requires — infrastructure, compliance, cost controls, CI/CD. In my experience, the deployment layer is about 80% of the work. It's also close to 0% of what gets budgeted when someone approves the POC.
 
+The moment an AI POC becomes real is usually not when the model improves. It is when identity, network boundaries, cost ownership, rollback, support, and audit enter the conversation.
+
 Every enterprise AI team eventually hits what I think of as the impossible choice.
 
 Option A: cloud AI services. Up and running in days. Managed. Latest models. But your data leaves your control, customization has limits, and you're locked into a vendor.

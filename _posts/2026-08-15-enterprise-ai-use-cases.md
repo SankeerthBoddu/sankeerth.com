@@ -1,64 +1,72 @@
 ---
-title: "Typical Enterprise AI Use Cases"
+title: "Same AI Stack, Different Enterprise Constraints"
 date: 2026-08-15
 layout: post
 categories: blog
 tags: [AI, EnterpriseAI, use-cases, architecture, industry]
-excerpt: "A practical catalog of what's actually reaching production — four categories, three industries, and the constraints that pick the architecture. Same Kubernetes and GPU stack underneath; completely different deployment shapes. Third in a five-part series."
+excerpt: "An HR assistant, a fraud model, and a factory-floor vision system can all be called enterprise AI. The useful question is not the label — it is which constraints determine the architecture. Third in a five-part series."
 ---
 
 ![Same stack, different deployment — enterprise AI use cases by category and industry]({{ '/assets/images/ai-series-3-industry-patterns.png' | relative_url }})
 
-Same technology stack. Completely different deployments. That's the real story of enterprise AI use cases.
+An HR policy assistant, a fraud model, and a factory-floor vision system may all be called enterprise AI.
 
-Underneath almost everything that ships, you find the same parts — Kubernetes, GPUs, ML pipelines. What changes is the shape of the deployment, and the shape comes from the industry's constraints, not from the technology.
+Architecturally, they have almost nothing in common.
 
-The previous post was about choosing the right kind of system. This one is about what those choices look like in the wild — by industry and by function.
+The previous post was about choosing the right kind of system: humans, rules, traditional machine learning, or generative AI. Once AI is actually justified, the next question is not which model is most impressive.
 
-Most use cases that reach production fall into four categories.
+It is which constraints decide where and how the system can run.
 
-**Predictive.** Demand forecasting, churn prediction, equipment failure. The classic machine learning bucket.
+Same broad building blocks. Completely different deployments.
 
-**Generative.** Document creation, code assistants, content generation. The hot category — and the one most likely to be misapplied.
+Data pipelines, model endpoints, identity, observability, and sometimes Kubernetes and GPUs show up repeatedly. What changes is the deployment shape, and that shape comes from the industry's constraints rather than the technology label.
 
-**Analytical.** Anomaly detection, risk assessment, fraud detection. Often traditional ML wearing 2026 vocabulary, but real.
+At a high level, production use cases still fall into familiar categories: predictive, generative, analytical, and conversational. That taxonomy is useful. It tells you what the system does. It does not tell you how the system must be deployed.
 
-**Conversational.** Customer service, internal support bots, knowledge retrieval. RAG patterns live here.
+For that, look at the environment around it.
 
-Within those categories, what ships — and how it's deployed — looks different by industry.
+**Financial services** runs fraud detection, credit risk scoring, trading algorithms, and anti-money-laundering monitoring. The common pattern is hybrid: cloud for training, where burst capacity helps, and tightly controlled infrastructure for inference. Compliance affects where data and models can run. Fraud detection needs very low latency. At millions of transactions a day, per-call pricing also matters.
 
-**Financial services** runs fraud detection, credit risk scoring, trading algorithms, anti-money laundering monitoring. The pattern is hybrid: cloud for training, because you need burst capacity, and on-prem for inference. Three reasons. Compliance demands tight control over where the model runs. Fraud detection needs sub-50-millisecond responses — you can't wait for a cloud roundtrip on a transaction. And at millions of transactions a day, per-call cloud pricing adds up fast.
+**Healthcare** has a different constraint set: patient readmission risk, medical-image analysis, clinical decision support, and drug-interaction checking. Data sovereignty, explainability, and auditability dominate the architecture. Cloud can still be useful for research and de-identified workloads, but even apparently simple documentation automation has to survive privacy and clinical review.
 
-**Healthcare** is different. Patient readmission risk, medical image analysis, clinical decision support, drug interaction checking. The architecture is almost always on-prem for everything. HIPAA isn't negotiable. Patient data doesn't leave the organization's control. Cloud shows up mainly for research on de-identified data. Even "simple" documentation automation needs deep explainability and audit — your data strategy ends up in front of your model strategy.
+**Manufacturing** is different again. Predictive maintenance, defect detection, supply-chain optimization, and energy optimization often require hybrid plus edge. A robotic arm cannot wait for a cloud round trip. Real-time inference belongs close to the equipment; cloud handles historical training and analytics that are not time-critical.
 
-**Manufacturing** is different again. Predictive maintenance, quality defect detection, supply chain optimization, energy optimization. The pattern is hybrid plus edge. On the factory floor you need edge computing for real-time control — a robotic arm can't wait on a cloud roundtrip. Cloud handles training on historical data and the analytics that aren't time-critical.
+There is no perfect architecture across all three. Each industry chooses a different trade-off deliberately.
 
-There's no perfect architecture in any of this. Each industry picks its trade-offs deliberately. Financial services optimizes for latency and compliance. Healthcare optimizes for sovereignty and audit. Manufacturing optimizes for real-time edge plus cloud training.
+Financial services optimizes for latency, control, and regulatory evidence.
 
-Function-level differences matter as much as industry ones. A rough map of where use cases actually get picked:
+Healthcare optimizes for sovereignty, safety, explainability, and audit.
 
-**Operations.** Document processing, workflow automation, predictive maintenance. Usually the best first territory — measurable baselines, tolerable risk.
+Manufacturing optimizes for real-time edge execution plus centralized training and fleet analytics.
 
-**IT and engineering.** Code assistants, runbook assistants, ticket triage. The team building AI is often its own first customer.
+Function-level differences matter just as much as industry differences.
 
-**Customer service.** Conversational agents and agent-assist. High visibility, high volume, unforgiving of wrong answers.
+**Operations.** Document processing, workflow automation, and predictive maintenance. Often the best first territory because the baseline is measurable and the operational value is visible.
 
-**Finance and risk.** Forecasting, fraud scoring, document review. Strong fit for ML; much tighter tolerance for GenAI fuzz.
+**IT and engineering.** Code assistants, runbook assistants, and ticket triage. The team building AI is often its own first customer, which makes feedback and adoption easier.
 
-**HR.** Policy Q&A, onboarding help. The most sensitive data in the company — access control decides what's even possible.
+**Customer service.** Conversational agents and agent-assist. High visibility, high volume, and very little tolerance for confident wrong answers.
 
-**Legal and compliance.** Contract review, regulatory research. RAG with citations works here; unsourced answers don't survive review.
+**Finance and risk.** Forecasting, fraud scoring, and document review. Strong territory for traditional ML; much tighter tolerance for generative fuzz.
 
-And a detail from the MIT data I mentioned in the first post: more than half of generative AI budgets went to sales and marketing tools, while the biggest measured ROI showed up in back-office automation. The shiny front office gets the budget. The boring back office gets the returns.
+**HR.** Policy Q&A and onboarding support. The data is highly sensitive, so access control determines what is possible before model selection does.
 
-A one-size AI strategy stamped across all of these doesn't survive contact with reality. HR data is far more sensitive than inventory data, and the deployment shape has to follow.
+**Legal and compliance.** Contract review and regulatory research. Retrieval with citations can work; unsourced answers do not survive review.
 
-The use cases I've worked on lean generative and analytical. An internal app that generates Terraform code with retrieval-based grounding — generative plus automation. Snowflake Cortex for AI-assisted enrichment and summarization — analytical plus generative. Power Platform portals that categorize and prioritize IT requests — conversational plus analytical. Agent workflow prototypes with Google's ADK and Gemini. And GCP project vending automation — not AI at all, but exactly the kind of platform work every AI use case ends up depending on.
+A detail from the MIT data in the first post is worth repeating: more than half of generative AI budgets went to sales and marketing tools, while the largest measured returns appeared in back-office automation. The visible front office attracts attention. The less glamorous operational workflow often produces the value.
 
-What's not on this list, and why.
+A one-size AI strategy stamped across these functions does not survive contact with reality. HR data is more sensitive than inventory data. Fraud scoring has a different latency and error profile than document summarization. A factory-floor decision has a different network boundary than an internal knowledge assistant.
 
-Anything that's really a rules engine dressed up as AI. If the logic is stable and the error tolerance is zero, use code. Anything where a human must own the final decision — the model can inform, it shouldn't decide. And "AI for everything" — matching the problem to the right system was the whole point of the previous post.
+The use cases I have worked on lean generative and analytical: an internal application that generated Terraform with retrieval-based grounding, Snowflake Cortex for enrichment and summarization, Power Platform portals that categorized and prioritized IT requests, and agent workflow prototypes with Google's ADK and Gemini.
 
-If you're evaluating a use case, pattern-match against your industry and your function first. The stack is mostly shared. The deployment shape is where the game is actually played.
+I have also worked on GCP project-vending automation that was not AI at all. It is still relevant because identity, networking, policy, observability, and self-service platform controls are the foundation every serious AI use case eventually needs.
+
+That is the distinction I have learned not to lose in the label.
+
+"Enterprise AI" tells you almost nothing about the architecture.
+
+The data sensitivity, latency, accountability, operating environment, and cost model tell you what the system actually has to become.
+
+Next in the series: deployment — the infrastructure, GPU, cost, and operating choices that turn those constraints into a production system.
 
 #AI #EnterpriseAI #Architecture #Cloud
