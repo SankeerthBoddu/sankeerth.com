@@ -11,15 +11,9 @@ Gemfile.lock
 
 # Node
 node_modules/
-boddu-coin/node_modules/
-boddu-coin/cache/
-boddu-coin/artifacts/
-boddu-coin/coverage/
 
 # Environment
 .env
-boddu-coin/.env
-boddu-coin/deployments-*.json
 
 # IDE
 .vscode/
@@ -31,6 +25,7 @@ boddu-coin/deployments-*.json
 Thumbs.db
 
 # Personal notes - DO NOT COMMIT
+_local/
 MY-NOTES.md
 *-NOTES.md
 *-GUIDE.md

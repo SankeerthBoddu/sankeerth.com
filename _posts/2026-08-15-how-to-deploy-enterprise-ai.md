@@ -1,6 +1,6 @@
 ---
 title: "How to Deploy Enterprise AI"
-date: 2026-08-22
+date: 2026-08-15
 layout: post
 categories: blog
 tags: [AI, EnterpriseAI, Kubernetes, GPU, infrastructure, deployment]

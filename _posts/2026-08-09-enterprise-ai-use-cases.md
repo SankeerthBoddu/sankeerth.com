@@ -1,6 +1,6 @@
 ---
 title: "Typical Enterprise AI Use Cases"
-date: 2026-08-15
+date: 2026-08-09
 layout: post
 categories: blog
 tags: [AI, EnterpriseAI, use-cases, architecture, industry]

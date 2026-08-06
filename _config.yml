@@ -124,22 +124,6 @@ content:
 
           **Tech:** Azure Functions, Azure AI Foundry, Power Automate, Dataverse, Power Pages, Power Apps, and OpenAPI.
 
-      - layout: left
-        border: weak
-        title: BODDU Coin (BDU)
-        link: /boddu-coin/
-        link_text: Try the Faucet
-        additional_links:
-          - title: Code
-            icon: fab fa-github
-            url: https://github.com/SankeerthBoddu/sankeerth.com/tree/main/boddu-coin
-        quote: >
-          Web3 learning project on Ethereum mainnet
-        description: |
-          Personal project to learn smart contract development and mainnet operations. Built an ERC-20 token with a public faucet that lets anyone claim free tokens with cooldown controls.
-
-          **Engineering focus:** Solidity, OpenZeppelin, Hardhat tests, MetaMask integration, contract verification, faucet rate limiting, ENS, and validator operations.
-
   - title: Experience
     layout: list
     content:
@@ -264,6 +248,7 @@ exclude:
     "lib/",
     "scripts/",
     "docker-compose.yml",
+    "boddu-coin",
     "boddu-coin/node_modules",
     "boddu-coin/cache",
     "boddu-coin/artifacts",
