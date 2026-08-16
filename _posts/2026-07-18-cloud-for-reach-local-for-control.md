@@ -4,59 +4,57 @@ date: 2026-07-18
 layout: post
 categories: blog
 tags: [AI, local-llm, LMStudio, Ollama, llama.cpp]
-excerpt: "Local AI is not just a hobby setup anymore. LM Studio, Ollama, llama.cpp, and quantization make it realistic to run useful models on a 16GB GPU — with a practical quality/speed tiering path."
+excerpt: "Local AI is useful as a lab bench and a control boundary. The tradeoff is that once you run the model yourself, memory, quantization, serving, upgrades, and capacity become your problem."
 ---
 
 ![Local AI workbench]({{ '/assets/images/post5.jpg' | relative_url }})
 
 Cloud for reach.
+
 Local for control.
 
-Local LLMs matter more now than they did a few months ago.
+I started testing local models because I wanted to understand the part that managed APIs hide.
 
-Not because cloud models stopped being useful.
-They're still great.
+The first useful lesson was not about which model was best.
 
-But a few things are hard to ignore:
+It was about the serving boundary.
 
-Access can change.
-Policies can change.
-Costs can grow faster than you expect.
+LM Studio made it easy to browse and compare models.
 
-That's why I've been testing more local models on my own machine.
+Ollama gave me a simple local API for application experiments.
 
-A few things I've learned:
+llama.cpp forced me to learn more of the mechanics: GGUF, quantization, context size, GPU offload, and what happens when model size and context start competing for memory.
 
-Local AI is not just a hobby setup anymore.
+That changed how I think about self-managed inference.
 
-LM Studio has been the easiest way for me to browse, test, and compare models.
+Running locally gives me more control over where the model runs and what leaves the machine. It is also a useful fallback and lab environment.
 
-Ollama has been great when I want a simple local API and quick developer workflows.
+But the infrastructure work comes back to me.
 
-llama.cpp is where I started learning the mechanics:
-GGUF, quantization, context size, GPU offload, and how VRAM and RAM limits actually behave.
+I have to think about:
 
-For serving or RAG-style workloads, vLLM and SGLang are the next lane once the basic setup is stable.
+- model artifacts and versions
+- memory footprint
+- quantization tradeoffs
+- context length
+- concurrency
+- upgrades
+- monitoring
+- API security
+- capacity
 
-On a 16GB RTX 5070 Ti class setup, my practical path hasn't been "run the biggest model possible."
+The practical approach for me has been to start with a model that comfortably fits the machine, make the full request path work, and then increase model size or context only when the quality improvement is worth the memory and latency tradeoff.
 
-It's been:
+That is a better learning path than starting with the biggest model I can barely load.
 
-- start with 7B–8B models to validate setup and CUDA,
-- move into 12B–14B for a better quality/speed tier,
-- then experiment with 30B-class or MoE-style models after I understand the knobs.
+For application-style serving, tools such as vLLM and SGLang are a different lane from desktop experimentation. They start to matter when I care about an API, concurrent requests, throughput, batching, and more production-like serving behavior.
 
-Quantization has been the biggest unlock.
-Plain version: it's how you compress a model so it uses less memory and becomes realistic to run locally, with a tradeoff between quality, speed, and footprint.
+I do not see this as cloud versus local.
 
-For sensitive work, private code, internal docs, regulated workflows, offline or air-gapped setups, that control layer matters even more.
+Managed models are still the easiest path when I want frontier capability without owning the serving stack.
 
-I don't see this as cloud vs local.
+Self-managed inference gives me another option when control, data location, offline use, experimentation, or platform ownership matters enough to justify operating it.
 
-Cloud is still the best lane for reach and frontier capability.
-Local gives you a fallback, a lab bench, and a cleaner control layer beside it.
+The model can be the same kind of workload.
 
-Cloud for reach.
-Local for control.
-
-What are you running locally right now — LM Studio, Ollama, llama.cpp, vLLM/SGLang, or something else?
+The operating responsibility is very different.

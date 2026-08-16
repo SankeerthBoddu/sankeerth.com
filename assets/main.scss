@@ -20,7 +20,7 @@
   --shadow: 0 18px 50px rgba(23, 32, 51, 0.10);
 }
 
-body.dark {
+html.dark {
   --background: #111827;
   --background-alt: #151f2e;
   --surface: #182235;
@@ -40,8 +40,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body,
-body.dark {
+body {
   background: var(--background);
   color: var(--text);
   font-family: Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -119,7 +118,7 @@ h4 {
   backdrop-filter: blur(14px);
 }
 
-body.dark .main-navigation {
+html.dark .main-navigation {
   background: rgba(17, 24, 39, 0.88);
 }
 
@@ -166,6 +165,31 @@ body.dark .main-navigation {
 .nav-menu a.active {
   background: var(--surface-muted);
   color: var(--text);
+}
+
+
+.theme-toggle {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 1.7rem;
+  height: 38px;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  width: 38px;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  background: var(--surface-muted);
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
 }
 
 .site-hero {
@@ -837,6 +861,7 @@ body.dark .main-navigation {
 @media (max-width: 760px) {
   .nav-shell {
     align-items: flex-start;
+    position: relative;
     flex-direction: column;
     gap: 12px;
     padding-bottom: 14px;
@@ -845,6 +870,12 @@ body.dark .main-navigation {
 
   .nav-menu {
     flex-wrap: wrap;
+  }
+
+  .theme-toggle {
+    position: absolute;
+    right: 18px;
+    top: 14px;
   }
 
   .nav-menu a {

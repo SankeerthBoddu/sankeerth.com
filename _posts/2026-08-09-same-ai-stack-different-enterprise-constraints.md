@@ -1,72 +1,63 @@
 ---
-title: "Same AI Stack, Different Enterprise Constraints"
+title: "Same AI, Different Constraints"
 date: 2026-08-09
 layout: post
 categories: blog
 tags: [AI, EnterpriseAI, use-cases, architecture, industry]
-excerpt: "An HR assistant, a fraud model, and a factory-floor vision system can all be called enterprise AI. The useful question is not the label — it is which constraints determine the architecture. Third in a five-part series."
+excerpt: "An HR assistant, a fraud system, and a factory-floor model can all be called enterprise AI. The architecture changes because the constraints change."
 ---
 
-![Same stack, different deployment — enterprise AI use cases by category and industry]({{ '/assets/images/ai-series-3-industry-patterns.png' | relative_url }})
+![Same AI, different constraints — HR, fraud, and factory-floor architecture tradeoffs]({{ '/assets/images/ai-series-3-industry-patterns.png' | relative_url }})
 
-An HR policy assistant, a fraud model, and a factory-floor vision system may all be called enterprise AI.
+"Enterprise AI" is a useful label until you have to design the system.
 
-Architecturally, they have almost nothing in common.
+Then the label stops helping.
 
-The previous post was about choosing the right kind of system: humans, rules, traditional machine learning, or generative AI. Once AI is actually justified, the next question is not which model is most impressive.
+An HR assistant, a fraud system, and a factory-floor vision model can all use AI. They do not have the same architecture because they do not have the same constraints.
 
-It is which constraints decide where and how the system can run.
+That is the part I think gets lost when architecture starts with the model.
 
-Same broad building blocks. Completely different deployments.
+Take an internal HR assistant.
 
-Data pipelines, model endpoints, identity, observability, and sometimes Kubernetes and GPUs show up repeatedly. What changes is the deployment shape, and that shape comes from the industry's constraints rather than the technology label.
+The model is not the first problem. Data access is. Policies may be available to everyone, while compensation or employee documents are not. Identity and authorization decide what context the system is allowed to use before generation.
 
-At a high level, production use cases still fall into familiar categories: predictive, generative, analytical, and conversational. That taxonomy is useful. It tells you what the system does. It does not tell you how the system must be deployed.
+A fraud system has a different shape. Latency, throughput, explainability, and cost per decision matter much more. A system that responds in a few seconds may be fine for document Q&A and completely useless in a transaction path.
 
-For that, look at the environment around it.
+A factory-floor system changes the boundary again. If a decision has to happen next to a machine, a cloud round trip may not be acceptable. Edge execution and local reliability become part of the design.
 
-**Financial services** runs fraud detection, credit risk scoring, trading algorithms, and anti-money-laundering monitoring. The common pattern is hybrid: cloud for training, where burst capacity helps, and tightly controlled infrastructure for inference. Compliance affects where data and models can run. Fraud detection needs very low latency. At millions of transactions a day, per-call pricing also matters.
+Same broad technology family. Different system.
 
-**Healthcare** has a different constraint set: patient readmission risk, medical-image analysis, clinical decision support, and drug-interaction checking. Data sovereignty, explainability, and auditability dominate the architecture. Cloud can still be useful for research and de-identified workloads, but even apparently simple documentation automation has to survive privacy and clinical review.
+For an agentic system I also find it useful to separate **model, context, and harness**.
 
-**Manufacturing** is different again. Predictive maintenance, defect detection, supply-chain optimization, and energy optimization often require hybrid plus edge. A robotic arm cannot wait for a cloud round trip. Real-time inference belongs close to the equipment; cloud handles historical training and analytics that are not time-critical.
+The model may be identical in two applications. What changes is the context it receives and the harness around it: retrieval, tools, identity, policy, state, retries, approvals, and stopping conditions. Those are application and platform decisions, not properties of the model.
 
-There is no perfect architecture across all three. Each industry chooses a different trade-off deliberately.
+I have seen the same thing in platform work that was not AI at all.
 
-Financial services optimizes for latency, control, and regulatory evidence.
+When we built cloud project-vending and landing-zone patterns, the visible output was a new project or subscription. Most of the real work sat underneath it: identity, networking, policy, observability, security controls, cost boundaries, and a repeatable onboarding path.
 
-Healthcare optimizes for sovereignty, safety, explainability, and audit.
+AI does not make those problems disappear.
 
-Manufacturing optimizes for real-time edge execution plus centralized training and fleet analytics.
+It adds another layer on top of them.
 
-Function-level differences matter just as much as industry differences.
+That is why I tend to start architecture conversations with a few constraints instead of a model name:
 
-**Operations.** Document processing, workflow automation, and predictive maintenance. Often the best first territory because the baseline is measurable and the operational value is visible.
+- What data is involved, and who is allowed to see it?
+- What latency is acceptable?
+- What happens when the system is wrong?
+- Where can the workload run?
+- What has to be logged or explained later?
+- Who owns the cost and the production support?
 
-**IT and engineering.** Code assistants, runbook assistants, and ticket triage. The team building AI is often its own first customer, which makes feedback and adoption easier.
+The answers change the architecture quickly.
 
-**Customer service.** Conversational agents and agent-assist. High visibility, high volume, and very little tolerance for confident wrong answers.
+In a regulated environment, private networking and audit evidence may matter more than having the newest model. In a high-volume workload, per-token economics may decide whether a managed service still makes sense. In a low-risk internal workflow, a managed model can be exactly the right tradeoff because it gets the team to value faster.
 
-**Finance and risk.** Forecasting, fraud scoring, and document review. Strong territory for traditional ML; much tighter tolerance for generative fuzz.
+There is no single "enterprise AI architecture" that wins everywhere.
 
-**HR.** Policy Q&A and onboarding support. The data is highly sensitive, so access control determines what is possible before model selection does.
+The reusable part is the way we reason about it: identity, data, network, context, orchestration, cost, reliability, observability, and governance.
 
-**Legal and compliance.** Contract review and regulatory research. Retrieval with citations can work; unsourced answers do not survive review.
+The model matters.
 
-A detail from the MIT data in the first post is worth repeating: more than half of generative AI budgets went to sales and marketing tools, while the largest measured returns appeared in back-office automation. The visible front office attracts attention. The less glamorous operational workflow often produces the value.
+The constraints decide what the system has to become.
 
-A one-size AI strategy stamped across these functions does not survive contact with reality. HR data is more sensitive than inventory data. Fraud scoring has a different latency and error profile than document summarization. A factory-floor decision has a different network boundary than an internal knowledge assistant.
-
-The use cases I have worked on lean generative and analytical: an internal application that generated Terraform with retrieval-based grounding, Snowflake Cortex for enrichment and summarization, Power Platform portals that categorized and prioritized IT requests, and agent workflow prototypes with Google's ADK and Gemini.
-
-I have also worked on GCP project-vending automation that was not AI at all. It is still relevant because identity, networking, policy, observability, and self-service platform controls are the foundation every serious AI use case eventually needs.
-
-That is the distinction I have learned not to lose in the label.
-
-"Enterprise AI" tells you almost nothing about the architecture.
-
-The data sensitivity, latency, accountability, operating environment, and cost model tell you what the system actually has to become.
-
-Next in the series: deployment — the infrastructure, GPU, cost, and operating choices that turn those constraints into a production system.
-
-#AI #EnterpriseAI #Architecture #Cloud
+Next: what changes when the POC has to become a production service.

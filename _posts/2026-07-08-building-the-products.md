@@ -7,8 +7,6 @@ tags: [AI, products, ApplyBench, MayaGuru, building]
 excerpt: "MayaGuru pushed me toward a subscription mindset. ApplyBench taught me almost the opposite — sometimes people just need help at the right moment, not a recurring plan."
 ---
 
-![Building products]({{ '/assets/images/post4.jpg' | relative_url }})
-
 Building the products was the easier part.
 
 Over the last few months, I've been building two AI products on nights and weekends.

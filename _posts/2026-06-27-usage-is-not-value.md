@@ -4,68 +4,68 @@ date: 2026-06-27
 layout: post
 categories: blog
 tags: [AI, governance, AIGovernance, GenAI, LLMOps]
-excerpt: "Most internal AI metrics don't tell you whether anything improved. Token usage, tool adoption, and POC counts don't answer the question that matters: is the business better because of this?"
+excerpt: "Token usage, tool adoption, and POC counts tell me whether people are using AI. They do not tell me whether the work got better."
 ---
 
-![AI governance]({{ '/assets/images/post3.jpg' | relative_url }})
-
 Usage is not value.
 
-I've been building more AI into real workflows lately, and one thing keeps standing out — most internal AI metrics don't tell you whether anything actually improved.
+I started paying more attention to this as AI tools moved from experiments into real workflows.
 
-We track token usage.
-We track tool adoption.
-We count POCs.
+It is easy to measure activity:
 
-But none of that answers the question that actually matters:
+- token usage
+- active users
+- number of POCs
+- number of prompts or agent runs
 
-Is the business better because of this?
+Those numbers are useful. They tell me whether the system is being used.
 
-Did quality go up?
-Did cost go down?
-Did delivery speed up?
-Did error rates drop?
-Did the people doing the work get real leverage?
+They do not tell me whether the work improved.
 
-I've been thinking about this more because the recent examples are hard to ignore.
+For that I want a baseline and an outcome.
 
-McDonald's ended its IBM AI drive-thru test after repeated ordering problems.
-Uber reportedly burned through its 2026 AI coding budget in just four months.
-Microsoft is pulling back internal Claude Code licenses and pushing teams toward Copilot CLI.
+Did the task take less time?
 
-To me, these aren't "AI is failing" stories.
+Did quality improve?
 
-They're what happens when adoption moves faster than governance.
+Did error or rework go down?
 
-And I think that's the real gap.
+Did the workflow become easier to support?
 
-Not more models.
-Not more tools.
+Did the cost of getting the result make sense?
 
-A real operating layer around the AI teams already have — governance, observability, cost controls, evaluation, clear ownership, and a way to roll things back.
+Did the people doing the work actually keep using it after the novelty wore off?
 
-We should probably stop treating internal AI leaderboards like scoreboards.
+The exact measure changes by use case.
 
-Usage is not value.
+For a document workflow I may care about cycle time, extraction accuracy, exception rate, and human review effort.
 
-We should be a lot more skeptical of AI POCs too.
+For a RAG assistant I may care about retrieval quality, grounded answers, access violations, latency, cost, and whether the questions are actually being resolved.
 
-If a POC has no path to production, no measurable return, no budget guardrails, and no one who actually owns it, it's not strategy.
+For an agent that changes something, I care even more about tool success, retries, approvals, failed actions, and whether the automation reduced work without creating a new support problem.
 
-It's an experiment with a nicer slide deck.
+This is where governance becomes more practical to me.
 
-The teams that get this right won't be the ones using the most AI.
+Governance is not just an approval meeting before a POC.
 
-They'll be the ones disciplined enough to keep asking:
+It is the operating layer around the system:
 
-What is this actually doing for us?
-What is it costing?
-Can we prove either one?
+```text
+owner
+  + measurable outcome
+  + cost boundary
+  + evaluation
+  + observability
+  + rollback
+  + policy
+```
 
-I'm still figuring out what the right balance looks like in practice.
+If I cannot name the outcome or the owner, I treat the work as an experiment.
 
-But the pattern keeps showing up:
+That is fine. Experiments are useful.
 
-Fast adoption without real governance gets expensive faster than most teams expect.
+I just do not want an adoption metric to quietly become the proof that the experiment worked.
 
-#AIGovernance #GenAI #LLMOps #AI
+The question I want to keep asking is simpler:
+
+**What changed because this system exists, and can I measure enough of that change to decide whether it is worth keeping?**

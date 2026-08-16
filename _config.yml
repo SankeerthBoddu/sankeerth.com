@@ -10,8 +10,8 @@ email_title: Email
 website: https://sankeerth.com
 website_title: Web
 
-# Dark Mode (true/false/never)
-darkmode: true
+# Dark Mode (false = follow visitor preference; manual override is remembered)
+darkmode: false
 
 # Social links
 linkedin_username: sankeerth
@@ -31,18 +31,18 @@ additional_links:
     icon: fab fa-ethereum
     url: https://app.ens.domains/boddu.eth
 
-# Google Analytics and Tag Manager
-google_analytics: "UA-6537510-1"
+# Analytics
+# Add a current GA4 measurement ID here only if analytics is enabled.
 
 # About Section
 about_title: About
 about_profile_image: images/profile1.jpg
 about_content: |
-  I am a senior cloud, AI, and data platform engineer with 19+ years of experience building systems that have to be reliable, auditable, and useful.
+  I am a senior cloud, AI, and data platform engineer with 20+ years of experience building systems that have to be reliable, auditable, and useful.
 
   My professional work sits where platform engineering meets data. I work on cloud infrastructure, AI-enabled automation, secure delivery pipelines, and the data systems around them: ETL, streaming, warehouse analytics, and reporting. I have worked across Azure, AWS, and GCP, with hands-on delivery using Terraform, Kubernetes, CI/CD, security scanning, and observability.
 
-  Outside work, I build personal software products and labs to stay close to product thinking and hands-on engineering. That includes **[ApplyBench.com](https://applybench.com)**, **[MayaGuru.com](https://mayaguru.com)**, Home Assistant add-ons, n8n automation, and Web3 experiments.
+  Outside work, I build personal software products and labs to stay close to product thinking and hands-on engineering. That includes **RAGAssure**, the **Secure Enterprise AI Assistant**, **[ApplyBench.com](https://applybench.com)**, **[MayaGuru.com](https://mayaguru.com)**, Home Assistant add-ons, n8n automation, and Web3 experiments.
 
   **M.S. Computer Science** | **7 cloud and platform certifications** across Azure, AWS, GCP, Kubernetes, Terraform, and cloud security.
 
@@ -75,6 +75,39 @@ content:
           **What it includes:** virtual staging, day-to-dusk conversion, background removal, AI headshots, product photography, photo restoration, HD upscaling, and an assistant.
 
           **Engineering focus:** monorepo architecture, cross-subdomain authentication, credit-based billing, image processing workflows, and cost controls for GPU-backed AI features.
+
+
+      - layout: left
+        border: weak
+        title: RAGAssure
+        link: https://github.com/SankeerthBoddu/ragassure
+        link_text: View on GitHub
+        additional_links:
+          - title: Code
+            icon: fab fa-github
+            url: https://github.com/SankeerthBoddu/ragassure
+        quote: >
+          Identity-aware contract testing and release assurance for enterprise RAG
+        description: |
+          Provider-neutral evaluation framework that combines standard RAG quality checks with principal-aware required/forbidden evidence and deterministic CI release gates.
+
+          **Engineering focus:** executable golden datasets, identity-aware evidence contracts, retrieval precision/recall, latency and cost thresholds, reports, adapters, Docker, and release automation.
+
+      - layout: left
+        border: weak
+        title: Secure Enterprise AI Assistant
+        link: https://github.com/SankeerthBoddu/secure-enterprise-ai-assistant
+        link_text: View on GitHub
+        additional_links:
+          - title: Code
+            icon: fab fa-github
+            url: https://github.com/SankeerthBoddu/secure-enterprise-ai-assistant
+        quote: >
+          Secure enterprise RAG application with authorization before generation
+        description: |
+          Working application that makes the evidence authorization boundary explicit before generation and uses RAGAssure to catch principal-specific retrieval regressions before release.
+
+          **Engineering focus:** FastAPI, Next.js, permission-aware retrieval, allowed-only citations, RAGAssure integration, Docker, CI, and a staged path to semantic retrieval, grounded generation, identity, policy, telemetry, and deployment.
 
       - layout: left
         border: weak
@@ -211,7 +244,7 @@ plugins:
 
 # SEO Settings
 description: >-
-  Sankeerth Boddu - senior cloud, AI, and data platform engineer with 19+ years of experience across cloud platforms,
+  Sankeerth Boddu - senior cloud, AI, and data platform engineer with 20+ years of experience across cloud platforms,
   automation, DevOps/SRE, security-conscious delivery, data pipelines, warehouses, analytics, and practical AI systems.
 
 keywords: >-
@@ -221,7 +254,7 @@ keywords: >-
 
 author:
   name: Sankeerth Boddu
-  email: contact@sankeerth.com
+  email: mail@sankeerth.com
   twitter: sankeerth
 
 twitter:

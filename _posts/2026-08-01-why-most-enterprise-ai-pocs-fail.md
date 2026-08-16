@@ -4,67 +4,72 @@ date: 2026-08-01
 layout: post
 categories: blog
 tags: [AI, EnterpriseAI, MLOps, GenAI, production]
-excerpt: "The failure stat gets quoted as if models are the problem. They aren't. POCs die from infrastructure, compliance, cost, and governance work nobody budgeted for. First in a five-part series on enterprise AI realities."
+excerpt: "The model is usually the visible part of an AI POC. Production exposes the less visible work: identity, data access, reliability, cost, governance, delivery, and ownership."
 ---
 
-![Why most enterprise AI POCs fail — stats, failure causes, and the POC-to-production gap]({{ '/assets/images/ai-series-1-poc-fail.png' | relative_url }})
+![Why most enterprise AI POCs fail — the gap between a working demo and an operable production system]({{ '/assets/images/ai-series-1-poc-fail.png' | relative_url }})
 
-Most enterprise AI POCs never reach production.
+A working AI demo can hide a lot of unfinished engineering.
 
-The number that gets quoted is 87%. It goes back to a 2019 VentureBeat piece on data science projects. In 2025, MIT's Project NANDA published The GenAI Divide: State of AI in Business, and the number landed even higher — about 95% of enterprise generative AI pilots showed no measurable P&L impact. Only around 5% achieved rapid revenue acceleration. Other studies keep landing in the same band.
+That is the part I keep coming back to when people ask why enterprise AI POCs do not automatically become production systems.
 
-Pick a number. They all say the same thing: most of what gets demoed never ships.
+The POC usually proves one narrow thing: **the model can do something useful with a controlled input.**
 
-Here's the part that should get more attention.
+Production asks a different set of questions.
 
-**It's not technical failure.** The MIT team reviewed 300 public AI deployments and interviewed 150 enterprise leaders, and their conclusion matches the earlier surveys: the core issue isn't model quality. It's flawed integration into the enterprise — the "learning gap" between a capable model and an organization that hasn't built the workflows, data access, and governance around it. That gap is what kills most POCs.
+Who is allowed to use it?
 
-Algorithmia's State of Enterprise ML survey — from teams actually trying to deploy ML, not lab experiments — puts numbers on it. 42% cite infrastructure complexity. 31% hit regulatory roadblocks after the POC was approved. 28% couldn't manage cost — what worked in dev exploded in production. 26% struggled with data governance: getting the right data, with the right permissions, at the right time.
+What data can each user see?
 
-Notice what's not on that list. "The model didn't work."
+Where does the workload run?
 
-The gap between POC and production is where the real engineering lives. And it's the part almost nobody budgets for.
+What happens when a dependency is unavailable?
 
-The POC runs on a laptop or one cloud GPU. Production needs a cluster.
+How do we know a prompt, model, document, or retrieval change did not make the behavior worse?
 
-The POC used a clean dataset. Production needs all the data — governed, permissioned, audited.
+Who owns the cost?
 
-POC latency was best-effort; five seconds was fine. Production has a 200-millisecond SLA and 99.9% uptime.
+Who gets paged when it fails?
 
-The POC had one developer. Production has hundreds of users with role-based access.
+Those questions are not model questions. They are system questions.
 
-The POC had no audit trail. Production needs complete logging.
+That is why the gap between POC and production feels familiar to me from platform engineering.
 
-POC model updates were ad hoc. Production needs CI/CD, versioning, rollback.
+A cloud application that works in one developer account is not automatically an enterprise platform either. Before teams depend on it, identity, networking, policy, observability, delivery, recovery, cost, support, and ownership have to become explicit.
 
-The POC skipped compliance review. Production means HIPAA, SOC2, GDPR.
+AI adds another set of moving parts on top of that.
 
-The POC had no cost monitoring. Production needs chargeback.
+A RAG demo may use a small clean document set. Production has to deal with document lifecycle, permissions, stale content, parsing failures, retrieval quality, citations, and users who are allowed to see different evidence.
 
-Every line in that gap is work someone didn't budget for when they approved the demo.
+An agent demo may successfully call a tool. Production has to decide which tools are available for which principal, validate the arguments, control credentials, handle retries, trace what happened, and put approval around high-impact actions.
 
-**Then there's the cost shock.**
+A model endpoint may respond correctly in a test. Production still has latency, concurrency, quotas, failure handling, rollout, rollback, and cost to manage.
 
-An A100 GPU runs about $3 to $4 an hour on the major clouds. Around the clock, that's roughly $2,800 to $3,000 per GPU per month. A typical production setup might use 16 GPUs for training and 4 for inference — about $57,000 a month. Five modest enterprise models and you're approaching $3.4 million a year.
+None of this means every AI experiment needs a giant platform before anyone can learn from it.
 
-I've watched this play out inside engagements. A small team builds a POC in three months, gets 89% accuracy, runs it for $5,000 a month. Everyone's excited. Then legal gets involved. Compliance says the data can't leave the data center. Uptime requirements appear. Multiple business units want in. The $5K a month becomes a $200K a month estimate. The 3-month POC becomes an 18-month infrastructure program. You need a platform team, not two data scientists.
+It means I want to know which production constraints matter **before** the architecture becomes difficult to change.
 
-That's how projects end up in the 87%.
+I usually ask a few questions early:
 
-One more detail from the MIT data worth sitting with: more than half of generative AI budgets went to sales and marketing tools. The biggest measured ROI showed up in back-office automation. Money follows what's easy to demo — not what's valuable.
+- What business workflow is this changing?
+- What data does it require?
+- Who can see or change that data?
+- What happens when the answer is wrong?
+- What latency and availability actually matter?
+- How will we evaluate a change?
+- Who owns the service after the demo?
+- What will make us stop the experiment?
 
-There's a second failure mode that gets less airtime. Some POCs fail because they chose the wrong system in the first place — generative AI where a rule would do, an LLM where traditional ML would do, an agent where a plain function would do. IBM puts it cleanly: most failures to reach production don't come from bad models. They come from choosing the wrong system.
+That last question matters too.
 
-So there are really two ways POCs die. You picked the right tool and never planned for production. Or you picked the wrong tool and the demo was never going to scale.
+Sometimes the problem is not that the team failed to productionize a good AI idea.
 
-The difference between the 5% that make it and everyone else isn't model quality.
+Sometimes AI was the wrong system in the first place.
 
-**The 95% didn't choose.** They let circumstances choose for them. They built the POC without thinking about production. They optimized for speed without thinking about compliance. They said yes without understanding the cost.
+A deterministic rule, a search index, SQL, a workflow engine, or traditional ML may solve the problem with less cost and less behavioral uncertainty.
 
-**The 5% understood their constraints before the POC.** They planned for production from day one.
+So for me the first production decision is not which model to use.
 
-The teams that get this right won't be the ones with the best models. They'll be the ones who planned for production before they wrote the first line of POC code.
+It is whether the problem deserves this kind of system at all.
 
-Next in this series: how to pick use cases — and how to know when AI is the wrong answer entirely.
-
-#AI #EnterpriseAI #MLOps #GenAI
+The rest of this series is about that path: choosing the problem, letting constraints shape the architecture, getting the system into production, and then proving that it still behaves the way we expect after it changes.

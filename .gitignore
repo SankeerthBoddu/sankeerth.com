@@ -6,7 +6,6 @@ _site/
 
 # Ruby
 *.gem
-Gemfile.lock
 .bundle/
 
 # Node
