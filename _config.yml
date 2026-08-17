@@ -42,7 +42,7 @@ about_content: |
 
   My professional work sits where platform engineering meets data. I work on cloud infrastructure, AI-enabled automation, secure delivery pipelines, and the data systems around them: ETL, streaming, warehouse analytics, and reporting. I have worked across Azure, AWS, and GCP, with hands-on delivery using Terraform, Kubernetes, CI/CD, security scanning, and observability.
 
-  Outside work, I build personal software products and labs to stay close to product thinking and hands-on engineering. That includes **RAGAssure**, the **Secure Enterprise AI Assistant**, **[ApplyBench.com](https://applybench.com)**, **[MayaGuru.com](https://mayaguru.com)**, Home Assistant add-ons, n8n automation, and Web3 experiments.
+  Outside work, I build personal software products and labs to stay close to product thinking and hands-on engineering. That includes **RAGAssure**, the **Secure Enterprise AI Assistant**, **[ApplyBench.com](https://applybench.com)**, **[MayaGuru.com](https://mayaguru.com)**, Home Assistant Apps, n8n automation, and Web3 experiments. I use these projects as proof-of-work around the full system — identity, AI behavior, cost and abuse controls, persistence, CI/CD, observability, and operational boundaries — rather than as startup-traction claims.
 
   **M.S. Computer Science** | **7 cloud and platform certifications** across Azure, AWS, GCP, Kubernetes, Terraform, and cloud security.
 
@@ -60,7 +60,7 @@ content:
         description: |
           Personal product for pay-per-use career tools: CV analysis, ATS scoring, cover letters, interview preparation, LinkedIn optimization, job comparison, and salary insights.
 
-          **Engineering focus:** document upload flows, AI analysis pipelines, reusable profile data, credit-based usage, and Next.js product delivery.
+          **Engineering focus:** grounded job intake and source trust, authentication, credit and AI-budget controls, rate limiting, durable AI workflows, persisted results, recovery/refunds, retention/redaction, and turning model output into actionable job decisions.
 
       - layout: left
         border: weak
@@ -68,14 +68,13 @@ content:
         link: https://mayaguru.com
         link_text: Visit MayaGuru
         quote: >
-          Personal AI product for real estate and e-commerce image workflows
+          Personal AI product for image workflows and conversational assistance
         description: |
-          Personal product built around practical image workflows for real estate agents and e-commerce sellers.
+          Personal product built around practical image workflows for real estate agents and e-commerce sellers, plus the Maya conversational assistant.
 
-          **What it includes:** virtual staging, day-to-dusk conversion, background removal, AI headshots, product photography, photo restoration, HD upscaling, and an assistant.
+          **What it includes:** virtual staging, day-to-dusk conversion, background removal, AI headshots, product photography, photo restoration, HD upscaling, and a streaming AI assistant.
 
-          **Engineering focus:** monorepo architecture, cross-subdomain authentication, credit-based billing, image processing workflows, and cost controls for GPU-backed AI features.
-
+          **Engineering focus:** monorepo and multi-app architecture, shared cross-subdomain identity, credit and usage controls, AI image pipelines, streaming conversational AI, rate limiting, conversation persistence, and model/GPU cost controls.
 
       - layout: left
         border: weak
@@ -86,12 +85,15 @@ content:
           - title: Code
             icon: fab fa-github
             url: https://github.com/SankeerthBoddu/ragassure
+          - title: PyPI
+            icon: fab fa-python
+            url: https://pypi.org/project/ragassure/
         quote: >
           Identity-aware contract testing and release assurance for enterprise RAG
         description: |
-          Provider-neutral evaluation framework that combines standard RAG quality checks with principal-aware required/forbidden evidence and deterministic CI release gates.
+          Provider-neutral evaluation framework that combines standard RAG quality checks with principal-aware required/forbidden evidence and deterministic CI release gates. **RAGAssure 0.1.0 alpha is released on PyPI.**
 
-          **Engineering focus:** executable golden datasets, identity-aware evidence contracts, retrieval precision/recall, latency and cost thresholds, reports, adapters, Docker, and release automation.
+          **Engineering focus:** executable golden datasets, identity-aware evidence contracts, retrieval precision/recall, latency and cost thresholds, reports, adapters, Docker, PyPI packaging, and release automation.
 
       - layout: left
         border: weak
@@ -105,9 +107,9 @@ content:
         quote: >
           Secure enterprise RAG application with authorization before generation
         description: |
-          Working application that makes the evidence authorization boundary explicit before generation and uses RAGAssure to catch principal-specific retrieval regressions before release.
+          Public reference application that makes the evidence authorization boundary explicit before generation and uses RAGAssure to catch principal-specific retrieval regressions before release.
 
-          **Engineering focus:** FastAPI, Next.js, permission-aware retrieval, allowed-only citations, RAGAssure integration, Docker, CI, and a staged path to semantic retrieval, grounded generation, identity, policy, telemetry, and deployment.
+          **Current milestone:** FastAPI + Next.js, synthetic employee/manager principals, deterministic candidate retrieval, authorization before generation, allowed-only citations, Docker, and a live RAGAssure CI gate. **Next:** pgvector semantic/hybrid retrieval, grounded model generation, telemetry, real identity, and stronger policy/data enforcement.
 
       - layout: left
         border: weak
@@ -119,11 +121,11 @@ content:
             icon: fab fa-github
             url: https://github.com/SankeerthBoddu/ha-rustdesk-server
         quote: >
-          Open-source Home Assistant add-on for self-hosted RustDesk relay servers
+          Open-source Home Assistant App for self-hosted RustDesk infrastructure
         description: |
-          Public Home Assistant add-on that packages RustDesk Server so users can self-host their own signaling and relay server for remote desktop connections.
+          Public Home Assistant App that packages the RustDesk ID/rendezvous and relay services so users can run remote-desktop infrastructure they control.
 
-          **Engineering focus:** Home Assistant add-on packaging, multi-architecture container support, GHCR publishing, add-on documentation, configuration defaults, and practical self-hosting ergonomics.
+          **Engineering focus:** Home Assistant App packaging, native `amd64`/`aarch64` container builds, upstream checksum verification, security scanning, GHCR multi-architecture publishing, release automation, and practical self-hosting ergonomics.
 
       - layout: left
         border: weak
@@ -223,12 +225,12 @@ content:
 
       **DevOps / SRE / security:** Azure DevOps, Jenkins, GitHub Actions, CI/CD, OpenTelemetry, Veracode, Snyk, SonarQube, SBOM
 
-      **Builder labs:** Next.js, Home Assistant add-ons, Node-RED, Solidity, Hardhat, Ethers.js
+      **Builder labs:** Next.js, Home Assistant Apps, Node-RED, Solidity, Hardhat, Ethers.js
 
   - title: Side Projects
     layout: text
     content: |
-      Personal-time work includes ApplyBench, MayaGuru, Home Assistant add-ons, n8n workflows, local AI automation, and small Web3 labs.
+      Personal-time work includes ApplyBench, MayaGuru, Home Assistant Apps, n8n workflows, local AI automation, and small Web3 labs.
 
 # Footer
 footer_show_references: false

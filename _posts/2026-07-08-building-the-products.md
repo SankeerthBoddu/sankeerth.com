@@ -43,6 +43,12 @@ That changed the product shape and the business model too.
 Not everything needs to be a subscription.
 Sometimes people just need help at the right moment.
 
+Looking back, I also value both products as engineering labs.
+
+ApplyBench pushed me into grounded job inputs, source confidence, authentication, credits and AI budgets, rate limits, persisted results, recovery paths, and retention controls. MayaGuru pushed me into image-generation pipelines, shared identity across multiple apps, usage controls, streaming chat, conversation persistence, and model cost management.
+
+I did very little distribution for either product, so I do not treat them as traction stories. Their value to me has been building and operating the whole system around the AI feature — not just getting a model call to work.
+
 Working on both at the same time has been a good reminder that a product can be technically real before the business is real.
 
 Getting the software working matters.
