@@ -82,7 +82,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(2.6rem, 4vw, 4.4rem);
+  font-size: clamp(2.3rem, 3.2vw, 3.5rem);
   font-weight: 650;
   line-height: 1.05;
   margin: 0;
@@ -334,16 +334,17 @@ html.dark .main-navigation {
 }
 
 .page-hero-shell {
-  padding-bottom: 54px;
-  padding-top: 54px;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 .page-hero h1 {
-  font-size: clamp(3.8rem, 6vw, 6.4rem);
+  font-size: clamp(3rem, 4.2vw, 4.6rem);
+  line-height: 1;
 }
 
 .section {
-  padding: 74px 0;
+  padding: 64px 0;
 }
 
 .compact-top {
@@ -360,8 +361,8 @@ html.dark .main-navigation {
 
 .split-grid {
   display: grid;
-  gap: 56px;
-  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  gap: 46px;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
 }
 
 .section-heading {
@@ -379,7 +380,7 @@ html.dark .main-navigation {
 
 .rich-copy p,
 .rich-copy li {
-  font-size: 1.65rem;
+  font-size: 1.55rem;
 }
 
 .rich-copy strong {
@@ -458,6 +459,8 @@ html.dark .main-navigation {
 }
 
 .page-intro h2 {
+  font-size: clamp(2.2rem, 3vw, 3.2rem);
+  line-height: 1.12;
   margin-bottom: 18px;
 }
 
@@ -891,7 +894,12 @@ html.dark .main-navigation {
   }
 
   .section {
-    padding: 54px 0;
+    padding: 50px 0;
+  }
+
+  .page-hero-shell {
+    padding-bottom: 32px;
+    padding-top: 32px;
   }
 
   .compact-top {

@@ -4,7 +4,7 @@ version: 2
 
 # Personal info
 name: Sankeerth Boddu
-title: Senior Cloud / AI / Data Platform Engineer
+title: "Cloud, AI & Data Platform Architect | Principal Engineer"
 email: mail@sankeerth.com
 email_title: Email
 website: https://sankeerth.com
@@ -38,11 +38,11 @@ additional_links:
 about_title: About
 about_profile_image: images/profile1.jpg
 about_content: |
-  I am a senior cloud, AI, and data platform engineer with 20+ years of experience building systems that have to be reliable, auditable, and useful.
+  I design and deliver cloud, AI, and data platforms that need to be secure, observable, reliable, and maintainable. My work spans architecture and hands-on engineering across Azure, AWS, and GCP.
 
-  My professional work sits where platform engineering meets data. I work on cloud infrastructure, AI-enabled automation, secure delivery pipelines, and the data systems around them: ETL, streaming, warehouse analytics, and reporting. I have worked across Azure, AWS, and GCP, with hands-on delivery using Terraform, Kubernetes, CI/CD, security scanning, and observability.
+  Professionally, I work across cloud infrastructure, AI-enabled automation, secure delivery pipelines, ETL and streaming systems, warehouse analytics, identity, observability, and production governance. Terraform, Kubernetes, CI/CD, security controls, and operational readiness are recurring parts of that work.
 
-  Outside work, I build personal software products and labs to stay close to product thinking and hands-on engineering. That includes **RAGAssure**, the **Secure Enterprise AI Assistant**, **[ApplyBench.com](https://applybench.com)**, **[MayaGuru.com](https://mayaguru.com)**, Home Assistant Apps, n8n automation, and Web3 experiments. I use these projects as proof-of-work around the full system — identity, AI behavior, cost and abuse controls, persistence, CI/CD, observability, and operational boundaries — rather than as startup-traction claims.
+  Outside work, I build **RAGAssure**, the **Secure Enterprise AI Assistant**, **[ApplyBench.com](https://applybench.com)**, **[MayaGuru.com](https://mayaguru.com)**, Home Assistant Apps, and other labs as hands-on proof-of-work around complete systems rather than startup-traction claims.
 
   **M.S. Computer Science** | **7 cloud and platform certifications** across Azure, AWS, GCP, Kubernetes, Terraform, and cloud security.
 
