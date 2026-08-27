@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+<style>
+.title{font:700 40px "DejaVu Sans",Arial,sans-serif;fill:#0b1f3a}
+.sub{font:400 21px "DejaVu Sans",Arial,sans-serif;fill:#53657d}
+.h{font:700 21px "DejaVu Sans",Arial,sans-serif;fill:#14243b}
+.b{font:400 16px "DejaVu Sans",Arial,sans-serif;fill:#31445d}
+.boxH{font:700 20px "DejaVu Sans",Arial,sans-serif;fill:#145cb9}
+.small{font:500 15px "DejaVu Sans",Arial,sans-serif;fill:#465a73}
+</style>
+<marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2f4968"/></marker>
+</defs>
+<rect width="1600" height="900" fill="#fbfcfe"/>
+<text x="70" y="66" class="title">Repository maintenance as an operating system</text>
+<text x="70" y="101" class="sub">Renovate finds change. Hermes applies procedure. CI proves the build. A human still owns shipping.</text>
+<rect x="55" y="175" width="280" height="280" rx="20" fill="#fff" stroke="#ccd8e7" stroke-width="2"/>
+<rect x="55" y="175" width="280" height="48" rx="20" fill="#fff" stroke="#159447" stroke-width="2"/>
+<text x="195" y="206" text-anchor="middle" font-family="DejaVu Sans,Arial" font-size="19" font-weight="700" fill="#159447">Renovate</text>
+<circle cx="81" cy="265" r="4" fill="#159447"/><text x="95" y="270" class="b">detect updates</text>
+<circle cx="81" cy="312" r="4" fill="#159447"/><text x="95" y="317" class="b">open PRs</text>
+<circle cx="81" cy="359" r="4" fill="#159447"/><text x="95" y="364" class="b">dependency dashboard</text>
+<line x1="339" y1="315" x2="356" y2="315" stroke="#2f4968" stroke-width="3" marker-end="url(#a)"/>
+<rect x="360" y="175" width="280" height="280" rx="20" fill="#fff" stroke="#ccd8e7" stroke-width="2"/>
+<rect x="360" y="175" width="280" height="48" rx="20" fill="#fff" stroke="#7253b8" stroke-width="2"/>
+<text x="500" y="206" text-anchor="middle" font-family="DejaVu Sans,Arial" font-size="19" font-weight="700" fill="#7253b8">Hermes + Skill</text>
+<circle cx="386" cy="265" r="4" fill="#7253b8"/><text x="400" y="270" class="b">classify change</text>
+<circle cx="386" cy="312" r="4" fill="#7253b8"/><text x="400" y="317" class="b">verify checksums</text>
+<circle cx="386" cy="359" r="4" fill="#7253b8"/><text x="400" y="364" class="b">prepare branch / draft PR</text>
+<line x1="644" y1="315" x2="661" y2="315" stroke="#2f4968" stroke-width="3" marker-end="url(#a)"/>
+<rect x="665" y="175" width="280" height="280" rx="20" fill="#fff" stroke="#ccd8e7" stroke-width="2"/>
+<rect x="665" y="175" width="280" height="48" rx="20" fill="#fff" stroke="#2165d6" stroke-width="2"/>
+<text x="805" y="206" text-anchor="middle" font-family="DejaVu Sans,Arial" font-size="19" font-weight="700" fill="#2165d6">GitHub CI</text>
+<circle cx="691" cy="265" r="4" fill="#2165d6"/><text x="705" y="270" class="b">lint + metadata</text>
+<circle cx="691" cy="312" r="4" fill="#2165d6"/><text x="705" y="317" class="b">BuildKit: amd64 + aarch64</text>
+<circle cx="691" cy="359" r="4" fill="#2165d6"/><text x="705" y="364" class="b">SHA-256 + Trivy</text>
+<line x1="949" y1="315" x2="966" y2="315" stroke="#2f4968" stroke-width="3" marker-end="url(#a)"/>
+<rect x="970" y="175" width="280" height="280" rx="20" fill="#fff" stroke="#ccd8e7" stroke-width="2"/>
+<rect x="970" y="175" width="280" height="48" rx="20" fill="#fff" stroke="#d47b18" stroke-width="2"/>
+<text x="1110" y="206" text-anchor="middle" font-family="DejaVu Sans,Arial" font-size="19" font-weight="700" fill="#d47b18">Human Gate</text>
+<circle cx="996" cy="265" r="4" fill="#d47b18"/><text x="1010" y="270" class="b">review intent</text>
+<circle cx="996" cy="312" r="4" fill="#d47b18"/><text x="1010" y="317" class="b">approve merge</text>
+<circle cx="996" cy="359" r="4" fill="#d47b18"/><text x="1010" y="364" class="b">approve shipping</text>
+<line x1="1254" y1="315" x2="1271" y2="315" stroke="#2f4968" stroke-width="3" marker-end="url(#a)"/>
+<rect x="1275" y="175" width="280" height="280" rx="20" fill="#fff" stroke="#ccd8e7" stroke-width="2"/>
+<rect x="1275" y="175" width="280" height="48" rx="20" fill="#fff" stroke="#16823b" stroke-width="2"/>
+<text x="1415" y="206" text-anchor="middle" font-family="DejaVu Sans,Arial" font-size="19" font-weight="700" fill="#16823b">Release + Deploy</text>
+<circle cx="1301" cy="265" r="4" fill="#16823b"/><text x="1315" y="270" class="b">exact config-derived tag</text>
+<circle cx="1301" cy="312" r="4" fill="#16823b"/><text x="1315" y="317" class="b">sign both images</text>
+<circle cx="1301" cy="359" r="4" fill="#16823b"/><text x="1315" y="364" class="b">publish multi-arch GHCR</text>
+<rect x="55" y="505" width="715" height="270" rx="20" fill="#fff" stroke="#ccd8e7" stroke-width="2"/>
+<text x="82" y="545" class="boxH">Three update classes</text>
+<rect x="82" y="569" width="175" height="30" rx="15" fill="#eef4fb"/><text x="169" y="590" text-anchor="middle" font-family="DejaVu Sans,Arial" font-size="14" font-weight="700" fill="#2165d6">A · CI / tooling</text><text x="280" y="590" class="b">Merge when green. No App release.</text>
+<rect x="82" y="631" width="175" height="30" rx="15" fill="#eef4fb"/><text x="169" y="652" text-anchor="middle" font-family="DejaVu Sans,Arial" font-size="14" font-weight="700" fill="#159447">B · Runtime / base</text><text x="280" y="652" class="b">Packaging revision when the change ships.</text>
+<rect x="82" y="693" width="175" height="30" rx="15" fill="#eef4fb"/><text x="169" y="714" text-anchor="middle" font-family="DejaVu Sans,Arial" font-size="14" font-weight="700" fill="#7253b8">C · RustDesk upstream</text><text x="280" y="714" class="b">New version + both checksums + full release path.</text>
+<rect x="800" y="505" width="745" height="270" rx="20" fill="#fff" stroke="#ccd8e7" stroke-width="2"/>
+<text x="827" y="545" class="boxH">State and authority stay separate</text>
+<text x="827" y="590" class="h">Mnemosyne</text><text x="1015" y="590" class="b">durable context — repo identity, preferences, history</text>
+<text x="827" y="638" class="h">Hermes skill</text><text x="1015" y="638" class="b">procedure — checks, release rules, guardrails</text>
+<text x="827" y="686" class="h">GitHub</text><text x="1015" y="686" class="b">live state — versions, PRs, CI, releases</text>
+<text x="827" y="734" class="h">Human</text><text x="1015" y="734" class="b">authority — merge and release</text>
+<rect x="55" y="806" width="1490" height="54" rx="14" fill="#f1f6fb" stroke="#d4e0ee"/>
+<text x="78" y="840" class="small">Custom skill: ha-rustdesk-server-maintainer  •  Self-hosted RustDesk on Home Assistant  •  Supported: amd64 + aarch64</text>
+</svg>
