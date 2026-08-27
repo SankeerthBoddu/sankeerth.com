@@ -5,6 +5,7 @@ layout: post
 categories: blog
 tags: [AI, local-llm, LMStudio, Ollama, llama.cpp]
 excerpt: "Local AI is useful as a lab bench and a control boundary. The tradeoff is that once you run the model yourself, memory, quantization, serving, upgrades, and capacity become your problem."
+image: /assets/images/post5.jpg
 ---
 
 ![Local AI workbench]({{ '/assets/images/post5.jpg' | relative_url }})

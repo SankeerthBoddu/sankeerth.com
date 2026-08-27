@@ -1,15 +1,15 @@
 <nav class="main-navigation">
   <div class="nav-shell">
     <div class="nav-brand">
-      <a href="/">{{ site.name | escape }}</a>
+      <a href="{{ '/' | relative_url }}">{{ site.name | escape }}</a>
     </div>
     <ul class="nav-menu">
-      <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
-      <li><a href="/experience/" {% if page.url == "/experience/" %}class="active"{% endif %}>Experience</a></li>
-      <li><a href="/projects/" {% if page.url == "/projects/" %}class="active"{% endif %}>Personal Projects</a></li>
-      <li><a href="/blog/" {% if page.url == "/blog/" or page.layout == "post" %}class="active"{% endif %}>Blog</a></li>
-      <li><a href="/skills/" {% if page.url == "/skills/" %}class="active"{% endif %}>Skills</a></li>
-      <li><a href="/contact/" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a></li>
+      <li><a href="{{ '/' | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+      <li><a href="{{ '/experience/' | relative_url }}" {% if page.url == "/experience/" %}class="active"{% endif %}>Experience</a></li>
+      <li><a href="{{ '/projects/' | relative_url }}" {% if page.url == "/projects/" %}class="active"{% endif %}>Personal Projects</a></li>
+      <li><a href="{{ '/blog/' | relative_url }}" {% if page.url == "/blog/" or page.layout == "post" %}class="active"{% endif %}>Blog</a></li>
+      <li><a href="{{ '/skills/' | relative_url }}" {% if page.url == "/skills/" %}class="active"{% endif %}>Skills</a></li>
+      <li><a href="{{ '/contact/' | relative_url }}" {% if page.url == "/contact/" %}class="active"{% endif %}>Contact</a></li>
     </ul>
     <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">☾</button>
   </div>
@@ -23,17 +23,16 @@
       <h1>{{ site.name | escape }}</h1>
       <p class="hero-title">{{ site.title | escape }}</p>
       <p class="hero-lede">
-        I design and deliver cloud, AI, and data platforms that need to be secure, observable,
-        reliable, and maintainable. My work spans architecture and hands-on engineering across
-        Azure, AWS, and GCP.
+        I turn platform strategy into production systems—connecting architecture, delivery,
+        security, reliability, and the operational details that make the design hold up.
       </p>
       <div class="hero-actions">
-        <a href="/experience/" class="button primary">View Experience</a>
-        <a href="/projects/" class="button secondary">Personal Projects</a>
+        <a href="{{ '/experience/' | relative_url }}" class="button primary">View Experience</a>
+        <a href="{{ '/projects/' | relative_url }}" class="button secondary">Personal Projects</a>
       </div>
     </div>
     <div class="hero-panel no-print">
-      <span class="profile-img" style="background-image: url({{ site.about_profile_image | relative_url }})"></span>
+      <img class="profile-img" src="{{ site.about_profile_image | relative_url }}" alt="Portrait of {{ site.name | escape }}">
       <div class="signal-list">
         <div>
           <strong>20+ years</strong>

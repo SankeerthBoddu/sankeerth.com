@@ -1,15 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemaps
 Sitemap: https://sankeerth.com/sitemap.xml
-
-# Block certain paths
-Disallow: /assets/
-Disallow: /_site/
-Disallow: /vendor/
-Disallow: /node_modules/
-
-# Allow important paths
-Allow: /boddu-coin/
-Allow: /images/

@@ -5,6 +5,7 @@ layout: post
 categories: blog
 tags: [AI, Hermes, local-llm, productivity]
 excerpt: "Memory layers, work diaries, background workflows through Discord, and Home Assistant integration — what actually makes an AI assistant stick around instead of being a one-off demo."
+image: /assets/images/post2-pic1.jpg
 ---
 
 ![Hermes workspace]({{ '/assets/images/post2-pic1.jpg' | relative_url }})

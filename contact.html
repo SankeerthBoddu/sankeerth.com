@@ -18,16 +18,16 @@ permalink: /contact/
     <div class="contact-card">
       {% if site.email %}
         <div class="contact-row">
-          <span><i class="fas fa-envelope"></i></span>
+          <span class="contact-mark" aria-hidden="true">@</span>
           <div>
             <strong>Email</strong>
-            <img src="/images/email.svg" alt="Email address">
+            <a href="mailto:{{ site.email | escape }}">{{ site.email | escape }}</a>
           </div>
         </div>
       {% endif %}
 
       <div class="contact-row">
-        <span><i class="fab fa-linkedin"></i></span>
+        <span class="contact-mark" aria-hidden="true">in</span>
         <div>
           <strong>LinkedIn</strong>
           <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">linkedin.com/in/{{ site.linkedin_username }}</a>
@@ -35,7 +35,7 @@ permalink: /contact/
       </div>
 
       <div class="contact-row">
-        <span><i class="fab fa-github"></i></span>
+        <span class="contact-mark" aria-hidden="true">GH</span>
         <div>
           <strong>GitHub</strong>
           <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">github.com/{{ site.github_username }}</a>
@@ -43,7 +43,7 @@ permalink: /contact/
       </div>
 
       <div class="contact-row">
-        <span><i class="fas fa-map-marker-alt"></i></span>
+        <span class="contact-mark" aria-hidden="true">⌖</span>
         <div>
           <strong>Location</strong>
           <p>Raleigh, NC, USA</p>

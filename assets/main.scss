@@ -2,7 +2,47 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-@import 'modern-resume-theme';
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+picture {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+p,
+ul,
+ol {
+  margin-top: 0;
+}
+
+ul,
+ol {
+  padding-left: 2.2rem;
+}
 
 :root {
   --background: #f7f8fb;
@@ -102,11 +142,16 @@ h4 {
 }
 
 .wrapper {
+  margin: 0;
   max-width: none;
+  padding: 0;
 }
 
 .container {
-  margin-top: 0;
+  margin: 0 auto;
+  max-width: 1180px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .main-navigation {
@@ -423,6 +468,9 @@ html.dark .main-navigation {
   height: 44px;
   justify-content: center;
   margin-bottom: 18px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
   width: 44px;
 }
 
@@ -586,7 +634,7 @@ html.dark .main-navigation {
   padding-bottom: 0;
 }
 
-.contact-row span {
+.contact-mark {
   align-items: center;
   background: var(--surface-muted);
   border-radius: 8px;
@@ -595,6 +643,8 @@ html.dark .main-navigation {
   flex: 0 0 42px;
   height: 42px;
   justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
 }
 
 .contact-row strong {
@@ -888,7 +938,8 @@ html.dark .main-navigation {
 
   .hero-shell,
   .section-shell,
-  .page-hero-shell {
+  .page-hero-shell,
+  .container {
     padding-left: 18px;
     padding-right: 18px;
   }

@@ -5,6 +5,7 @@ layout: post
 categories: blog
 tags: [AI, Hermes, OpenClaw, tools]
 excerpt: "OpenClaw kept breaking — 6 versions in 6 days, one broke Codex auth the day it shipped. So I gave Hermes a real shot, and it felt like a better fit for how I work day to day."
+image: /images/social-card.png
 ---
 
 I've been tinkering with OpenClaw for a while. Last week, I realized I was spending more time fixing it than using it.

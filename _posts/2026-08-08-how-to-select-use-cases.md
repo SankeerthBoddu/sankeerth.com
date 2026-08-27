@@ -5,6 +5,7 @@ layout: post
 categories: blog
 tags: [AI, EnterpriseAI, strategy, use-cases, architecture]
 excerpt: "Building an AI demo is easy. Choosing when AI is actually the right tool is harder. I start with the business problem and use the least complicated system that can solve it."
+image: /assets/images/ai-series-2-use-case-selection.png
 ---
 
 ![Choosing the right system — humans, rules, traditional ML, or generative AI]({{ '/assets/images/ai-series-2-use-case-selection.png' | relative_url }})

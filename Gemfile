@@ -1,2 +1,4 @@
 source "https://rubygems.org"
-gemspec
+
+gem "github-pages", "~> 232", group: :jekyll_plugins
+gem "html-proofer", "~> 5.0", group: :test

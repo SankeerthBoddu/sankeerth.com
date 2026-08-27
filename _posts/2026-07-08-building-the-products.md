@@ -5,6 +5,7 @@ layout: post
 categories: blog
 tags: [AI, products, ApplyBench, MayaGuru, building]
 excerpt: "MayaGuru pushed me toward a subscription mindset. ApplyBench taught me almost the opposite — sometimes people just need help at the right moment, not a recurring plan."
+image: /images/social-card.png
 ---
 
 Building the products was the easier part.

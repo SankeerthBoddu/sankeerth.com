@@ -5,6 +5,7 @@ layout: post
 categories: blog
 tags: [AI, governance, AIGovernance, GenAI, LLMOps]
 excerpt: "Token usage, tool adoption, and POC counts tell me whether people are using AI. They do not tell me whether the work got better."
+image: /images/social-card.png
 ---
 
 Usage is not value.

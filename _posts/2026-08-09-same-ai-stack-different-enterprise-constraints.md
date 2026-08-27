@@ -5,6 +5,7 @@ layout: post
 categories: blog
 tags: [AI, EnterpriseAI, use-cases, architecture, industry]
 excerpt: "An HR assistant, a fraud system, and a factory-floor model can all be called enterprise AI. The architecture changes because the constraints change."
+image: /assets/images/ai-series-3-industry-patterns.png
 ---
 
 ![Same AI, different constraints — HR, fraud, and factory-floor architecture tradeoffs]({{ '/assets/images/ai-series-3-industry-patterns.png' | relative_url }})

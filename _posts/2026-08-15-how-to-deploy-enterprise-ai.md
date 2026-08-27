@@ -5,6 +5,7 @@ layout: post
 categories: blog
 tags: [AI, EnterpriseAI, Kubernetes, infrastructure, deployment, MLOps]
 excerpt: "The model is only one part of production. Identity, networking, cost, observability, rollback, security, and ownership decide whether the system actually ships."
+image: /assets/images/ai-series-4-deployment.png
 ---
 
 ![Getting AI into production — managed, self-managed, hybrid, and an evaluation gate before promotion]({{ '/assets/images/ai-series-4-deployment.png' | relative_url }})

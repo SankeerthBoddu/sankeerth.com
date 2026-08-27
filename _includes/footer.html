@@ -1,7 +1,7 @@
 <div class="container footer-container">
   <p>
-    {{ site.name | escape }} -
-    <img src="/images/email.svg" alt="Email" style="vertical-align: middle; height: 16px;">
+    {{ site.name | escape }} —
+    <a href="mailto:{{ site.email | escape }}">{{ site.email | escape }}</a>
     {%- if site.footer_show_references -%}
       &nbsp;- {{ site.references_title | default: "References on request" }}
     {%- endif -%}

@@ -217,7 +217,7 @@ content:
     content: |
       **Cloud / platform:** Azure, AWS, GCP, Terraform, Kubernetes, networking, identity, operational readiness
 
-      **AI / automation:** Azure AI Foundry, OpenAI, Gemini, Google ADK, RAG, Power Platform, n8n
+      **AI / automation:** Azure AI Foundry, OpenAI, Gemini, Google ADK, RAG, agent workflows, Agentic AI on AWS, Power Platform, n8n
 
       **Data platforms:** Snowflake, Snowflake Cortex, Oracle, BigQuery, Ab Initio, ETL pipelines, data warehouses, analytics, star-schema modeling
 
@@ -237,7 +237,6 @@ footer_show_references: false
 
 # Build settings
 sass:
-  sass_dir: _sass
   style: compressed
 
 plugins:
@@ -263,6 +262,16 @@ twitter:
   username: sankeerth
   card: summary_large_image
 
+logo: /images/social-card.png
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /images/social-card.png
+        alt: "Sankeerth Boddu — cloud, AI, and data platform architecture"
+
 social:
   name: Sankeerth Boddu
   links:
@@ -280,11 +289,5 @@ exclude:
     "vendor/cache/",
     "vendor/gems/",
     "vendor/ruby/",
-    "lib/",
-    "scripts/",
-    "docker-compose.yml",
-    "boddu-coin",
-    "boddu-coin/node_modules",
-    "boddu-coin/cache",
-    "boddu-coin/artifacts",
+    "_local/",
   ]

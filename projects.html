@@ -34,7 +34,7 @@ permalink: /projects/
                 <div class="project-links">
                   {% for link in item.additional_links %}
                     <a href="{{ link.url }}" target="_blank" rel="noopener" title="{{ link.title }}">
-                      <i class="{{ link.icon }}"></i> {{ link.title }}
+                      {{ link.title }}
                     </a>
                   {% endfor %}
                 </div>

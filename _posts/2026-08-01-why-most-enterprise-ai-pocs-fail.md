@@ -5,6 +5,7 @@ layout: post
 categories: blog
 tags: [AI, EnterpriseAI, MLOps, GenAI, production]
 excerpt: "The model is usually the visible part of an AI POC. Production exposes the less visible work: identity, data access, reliability, cost, governance, delivery, and ownership."
+image: /assets/images/ai-series-1-poc-fail.png
 ---
 
 ![Why most enterprise AI POCs fail — the gap between a working demo and an operable production system]({{ '/assets/images/ai-series-1-poc-fail.png' | relative_url }})
